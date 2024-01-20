@@ -5,26 +5,21 @@ use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
 
+
+
 Route::middleware('guest')->group(function () {
+    Volt::route('register', 'auth.sign-up')
+        ->name('register');
 
-    Route::view('login', 'sign-in')->name('login');
-    Route::view('register', 'sign-up')->name('register');
-    
+    Volt::route('login', 'auth.sign-in')
+        ->name('login');
+
+    Volt::route('forgot-password', 'pages.auth.forgot-password')
+        ->name('password.request');
+
+    Volt::route('logout', 'auth.sign-out')
+        ->name('logout');
 });
-
-// Route::middleware('guest')->group(function () {
-//     Volt::route('register', 'pages.auth.register')
-//         ->name('register');
-
-//     Volt::route('login', 'pages.auth.login')
-//         ->name('login');
-
-//     Volt::route('forgot-password', 'pages.auth.forgot-password')
-//         ->name('password.request');
-
-//     Volt::route('reset-password/{token}', 'pages.auth.reset-password')
-//         ->name('password.reset');
-// });
 
 
 

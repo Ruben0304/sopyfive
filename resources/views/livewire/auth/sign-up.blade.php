@@ -1,3 +1,11 @@
+<?php
+
+use App\Providers\RouteServiceProvider;
+use Illuminate\Support\Facades\Session;
+use Livewire\Attributes\Layout;
+use Livewire\Volt\Component;
+
+new #[Layout('layouts.app')] class extends Component {}; ?>
 <div class="container-fluid bg-300 dark__bg-1200">
     <div class="bg-holder bg-auth-card-overlay" style="background-image:url(../../../assets/img/bg/37.png);"></div>
     <!--/.bg-holder-->
@@ -22,7 +30,7 @@
               </div>
               <div class="col mx-auto">
                 <div class="auth-form-box">
-                  <div class="text-center mb-7"><a class="d-flex flex-center text-decoration-none mb-4" href="../../../index-2.html">
+                  <div class="text-center mb-7"><a class="d-flex flex-center text-decoration-none mb-4" href="{{route('logout')}}">
                       <div class="d-flex align-items-center fw-bolder fs-5 d-inline-block"><img src="../../../assets/img/icons/logo.png" alt="phoenix" width="58" /></div>
                     </a>
                     <h3 class="text-1000">Sign Up</h3>
@@ -40,7 +48,7 @@
                       <div class="col-xl-6"><label class="form-label" for="confirmPassword">Confirm Password</label><input class="form-control form-icon-input" id="confirmPassword" type="password" placeholder="Confirm Password" /></div>
                     </div>
                     <div class="form-check mb-3"><input class="form-check-input" id="termsService" type="checkbox" /><label class="form-label fs--1 text-none" for="termsService">I accept the <a href="#!">terms </a>and <a href="#!">privacy policy</a></label></div><button class="btn btn-primary w-100 mb-3">Sign up</button>
-                    <div class="text-center"><a class="fs--1 fw-bold" href="sign-in.html">Sign in to an existing account</a></div>
+                    <div class="text-center"><a class="fs--1 fw-bold" href="{{route('mercado')}}" wire:navigate >Sign in to an existing account</a></div>
                   </form>
                 </div>
               </div>

@@ -1,3 +1,11 @@
+<?php
+
+use App\Providers\RouteServiceProvider;
+use Illuminate\Support\Facades\Session;
+use Livewire\Attributes\Layout;
+use Livewire\Volt\Component;
+
+new #[Layout('layouts.app')] class extends Component {}; ?>
 <div class="container-fluid bg-300 dark__bg-1200">
     <div class="bg-holder bg-auth-card-overlay" style="background-image:url(../../../assets/img/bg/37.png);"></div>
     <!--/.bg-holder-->

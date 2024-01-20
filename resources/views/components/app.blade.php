@@ -38,9 +38,22 @@
     <link href="../../../assets/css/theme.min.css" type="text/css" rel="stylesheet" id="style-default">
     <link href="../../../assets/css/user-rtl.min.css" type="text/css" rel="stylesheet" id="user-style-rtl">
     <link href="../../../assets/css/user.min.css" type="text/css" rel="stylesheet" id="user-style-default">
+    <script>
+        var phoenixIsRTL = window.config.config.phoenixIsRTL;
+        if (phoenixIsRTL) {
+            var linkDefault = document.getElementById('style-default');
+            var userLinkDefault = document.getElementById('user-style-default');
+            linkDefault.setAttribute('disabled', true);
+            userLinkDefault.setAttribute('disabled', true);
+            document.querySelector('html').setAttribute('dir', 'rtl');
+        } else {
+            var linkRTL = document.getElementById('style-rtl');
+            var userLinkRTL = document.getElementById('user-style-rtl');
+            linkRTL.setAttribute('disabled', true);
+            userLinkRTL.setAttribute('disabled', true);
+        }
+    </script>
     <link href="../../../vendors/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-    @livewireStyles
 </head>
 
 <body>
@@ -48,9 +61,10 @@
     <!--    Main Content-->
     <!-- ===============================================-->
     <main class="main" id="top">
-
-        {{ $slot }}
-
+        <livewire:market.layout.navigation>
+            <livewire:market.component.market-navbar>
+                {{ $slot }}
+                <livewire:market.layout.footer>
     </main>
     <!-- ===============================================-->
     <!--    JavaScripts-->
@@ -67,7 +81,6 @@
     <script src="../../../vendors/dayjs/dayjs.min.js"></script>
     <script src="../../../assets/js/phoenix.js"></script>
     <script src="../../../vendors/swiper/swiper-bundle.min.js"></script>
-    @livewireScripts
 </body>
 
 </html>
