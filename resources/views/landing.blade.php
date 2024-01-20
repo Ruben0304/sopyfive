@@ -58,7 +58,7 @@
                                     <nav>
                                         <ul id="navigation">
                                             <li><a href="index.html">Inicio</a></li>
-                                            <li><a href="about.html">Mercado</a></li>
+                                            <li><a href="{{route('mercado')}}" wire:navigate>Mercado</a></li>
                                             {{-- <li><a href="services.html">Comunidades</a></li> --}}
                                             <li><a href="blog.html">Comunidades</a>
                                                 <ul class="submenu">

@@ -14,9 +14,17 @@ use Livewire\Volt\Volt;
 |
 */
 
-Route::view('/', 'landing');
+Route::view('/', 'landing')->name('home');
+
+
 Volt::route('mercado', 'market.home')
     ->name('mercado');
+
+Volt::route('mercado/productos', 'market.products')
+    ->name('productos');
+
+Volt::route('mercado/detalles', 'market.product-info')
+    ->name('product-info');
 
 
 
