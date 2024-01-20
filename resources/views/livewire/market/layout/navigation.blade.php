@@ -26,7 +26,7 @@
                                 </div>
                             </li>
                             <li class="nav-item"><a class="nav-link px-2 icon-indicator icon-indicator-primary"
-                                    href="cart.html" role="button"><span class="text-700" data-feather="shopping-cart"
+                                    href="{{route('cart')}}" wire:navigate role="button"><span class="text-700" data-feather="shopping-cart"
                                         style="height:20px;width:20px;"></span><span
                                         class="icon-indicator-number">3</span></a></li>
                             <li class="nav-item dropdown"><a

@@ -26,6 +26,9 @@ Volt::route('mercado/productos', 'market.products')
 Volt::route('mercado/detalles', 'market.product-info')
     ->name('product-info');
 
+Volt::route('mercado/carrito', 'market.cart')
+    ->name('cart');
+
 
 
 
