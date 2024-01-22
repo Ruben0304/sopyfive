@@ -28,7 +28,7 @@
                                             </ul>
                                         </li>
                                         <li><a href="contact.html">Sobre Nosotros</a></li>
-                                        <li><a href="{{route('register')}}" >Entrar</a></li>
+                                       
                                     </ul>
                                 </nav>
                             </div>

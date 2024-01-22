@@ -20,7 +20,12 @@
     <tbody class="list" id="cart-table-body">
 
         {{-- ITEM CART --}}
-        @livewire('market.component.cart-item')
+
+        @foreach ($cartItems as $item)
+            @livewire('market.component.cart-item', ['item' => $item], key($item->id))
+        @endforeach
+
+
 
         <tr class="cart-table-row btn-reveal-trigger">
             <td class="text-1100 fw-semi-bold ps-0 fs-0" colspan="6">Items subtotal

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Livewire\Actions\Logout;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
@@ -16,14 +17,22 @@ Route::middleware('guest')->group(function () {
 
     Volt::route('forgot-password', 'pages.auth.forgot-password')
         ->name('password.request');
-
-    Volt::route('logout', 'auth.sign-out')
-        ->name('logout');
 });
 
 
 
 Route::middleware('auth')->group(function () {
+    Volt::route('account', 'market.home')
+        ->name('account');
+
+    Route::get('/logout', function (Logout $logout) {
+
+        $logout();
+
+
+        return redirect('/');
+    })->name('logout');
+
     Volt::route('verify-email', 'pages.auth.verify-email')
         ->name('verification.notice');
 
