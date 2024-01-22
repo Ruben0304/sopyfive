@@ -3,10 +3,10 @@
                 src="../../../assets/img/products/2.png" alt="" width="53" /></a></td>
     <td class="products align-middle"><a class="fw-semi-bold mb-0 line-clamp-2"
             href="product-details.html">{{ $item->name }}</a></td>
-    <td class="color align-middle white-space-nowrap fs--1 text-900">Glossy
+    {{-- <td class="color align-middle white-space-nowrap fs--1 text-900">Glossy
         black</td>
     <td class="size align-middle white-space-nowrap text-700 fs--1 fw-semi-bold">
-        XL</td>
+        XL</td> --}}
     <td class="price align-middle text-900 fs--1 fw-semi-bold text-end">${{ $price }}
     </td>
     <td class="quantity align-middle fs-0 ps-5">
@@ -18,7 +18,7 @@
         </div>
     </td>
 
-    <td class="total align-middle fw-bold text-1000 text-end">$300</td>
+    <td class="total align-middle fw-bold text-1000 text-end">${{$price * $quantity}}</td>
     <td class="align-middle white-space-nowrap text-end pe-0 ps-3"><button
-            class="btn btn-sm text-500 hover-text-600 me-2"><span class="fas fa-trash"></span></button></td>
+            class="btn btn-sm text-500 hover-text-600 me-2" wire:click='removeFromCart'><span class="fas fa-trash"></span></button></td>
 </tr>

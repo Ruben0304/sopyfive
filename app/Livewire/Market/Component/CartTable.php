@@ -4,7 +4,7 @@ namespace App\Livewire\Market\Component;
 
 use Darryldecode\Cart\Facades\CartFacade;
 use Livewire\Component;
-
+use Livewire\Attributes\On;
 class CartTable extends Component
 {
     public $cartItems;
@@ -14,6 +14,13 @@ class CartTable extends Component
         $sessionId = session()->getId();
         $this->cartItems = CartFacade::session($sessionId)->getContent();
         
+    }
+
+    #[On('cartDeleted')] 
+    public function onDeleteCartItems()
+    {
+        $sessionId = session()->getId();
+        $this->cartItems = CartFacade::session($sessionId)->getContent();
     }
 
     public function render()

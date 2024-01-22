@@ -36,13 +36,14 @@ class CartItem extends Component
                 ),
             ));
         }
+        $this->dispatch('cartModified');
     }
 
     public function increment()
     {
 
         $this->quantity++;
-       
+
         $sessionId = session()->getId();
         CartFacade::session($sessionId)->update($this->item->id, array(
             'quantity' => array(
@@ -50,6 +51,16 @@ class CartItem extends Component
                 'value' => 1
             ),
         ));
+
+        $this->dispatch('cartModified');
+    }
+
+    //eliminar del carrito
+    public function removeFromCart()
+    {
+        $sessionId = session()->getId();
+        CartFacade::session($sessionId)->remove($this->item->id);
+        $this->dispatch('cartDeleted');
     }
 
 

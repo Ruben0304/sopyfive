@@ -4,10 +4,10 @@
             <th class="sort white-space-nowrap align-middle fs--2" scope="col">
             </th>
             <th class="sort white-space-nowrap align-middle" scope="col" style="min-width:250px;">PRODUCTS</th>
-            <th class="sort align-middle" scope="col" style="width:80px;">COLOR
+            {{-- <th class="sort align-middle" scope="col" style="width:80px;">COLOR
             </th>
             <th class="sort align-middle" scope="col" style="width:150px;">SIZE
-            </th>
+            </th> --}}
             <th class="sort align-middle text-end" scope="col" style="width:300px;">PRICE
             </th>
             <th class="sort align-middle ps-5" scope="col" style="width:200px;">
@@ -27,11 +27,11 @@
 
 
 
-        <tr class="cart-table-row btn-reveal-trigger">
+        {{-- <tr class="cart-table-row btn-reveal-trigger">
             <td class="text-1100 fw-semi-bold ps-0 fs-0" colspan="6">Items subtotal
                 :</td>
             <td class="text-1100 fw-bold text-end fs-0">$691</td>
             <td></td>
-        </tr>
+        </tr> --}}
     </tbody>
 </table>

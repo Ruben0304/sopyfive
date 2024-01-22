@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Market\Admin\AddProduct;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
@@ -16,6 +17,7 @@ use Livewire\Volt\Volt;
 
 Route::view('/', 'landing')->name('home');
 
+Route::view('market/add-product', AddProduct::class);
 
 Volt::route('mercado', 'market.home')
     ->name('mercado');
