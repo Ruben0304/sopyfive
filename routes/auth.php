@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Livewire\Actions\Logout;
+use App\Livewire\Auth\Login;
+use App\Livewire\Auth\Register;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
@@ -9,14 +11,12 @@ use Livewire\Volt\Volt;
 
 
 Route::middleware('guest')->group(function () {
-    Volt::route('register', 'auth.sign-up')
-        ->name('register');
+   
 
-    Volt::route('login', 'auth.sign-in')
-        ->name('login');
+    Route::get('/login', Login::class)->name('login');
+    Route::get('/register', Register::class)->name('register');
 
-    Volt::route('forgot-password', 'pages.auth.forgot-password')
-        ->name('password.request');
+    
 });
 
 

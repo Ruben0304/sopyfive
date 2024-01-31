@@ -1,6 +1,6 @@
-<section class="py-0">
+<section class="py-0" wire:refresh>
     <div class="container-small">
-        <div class="ecommerce-topbar">
+        <div class="ecommerce-topbar" >
             <nav class="navbar navbar-expand-lg navbar-light px-0">
                 <div class="row gx-0 gy-2 w-100 flex-between-center">
                     <div class="col-auto"><a class="text-decoration-none" href="../../../index-2.html">
@@ -31,9 +31,11 @@
                                         class="icon-indicator-number">{{$cartSize}}</span></a></li>
 
                             {{-- ITEM ORDENES --}}
-                            @livewire('market.component.nav-orders')
+                            <livewire:market.component.nav-orders>
+                            
                             {{-- ITEM USUARIO --}}
-                            @livewire('market.component.nav-user')
+                            <livewire:market.component.nav-user>
+                            
 
                         </ul>
                     </div>

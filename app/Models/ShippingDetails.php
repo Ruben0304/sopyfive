@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class ShippingDetails extends Model
 {
 
-    protected $fillable = ['user_id', 'address', 'city'];
+    protected $fillable = ['user_id', 'name', 'phone', 'address', 'city', 'state','country', 'references'];
 
     public function user()
     {

@@ -1,6 +1,15 @@
 <?php
 
+use App\Livewire\Encuesta;
+use App\Livewire\Landing\About;
+use App\Livewire\Landing\Content;
 use App\Livewire\Market\Admin\AddProduct;
+use App\Livewire\Market\Cart;
+use App\Livewire\Market\MarketHome;
+use App\Livewire\Market\Products;
+use App\Livewire\Market\ShippingDetails;
+use App\Livewire\Market\Stripe\StripeWebhookHandler;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
@@ -15,21 +24,33 @@ use Livewire\Volt\Volt;
 |
 */
 
-Route::view('/', 'landing')->name('home');
 
-Route::view('market/add-product', AddProduct::class);
 
-Volt::route('mercado', 'market.home')
-    ->name('mercado');
+// Route::view('market/add-product', AddProduct::class);
 
-Volt::route('mercado/productos', 'market.products')
-    ->name('productos');
+// Volt::route('mercado/add-product', 'market.add-product')
+//     ->name('add-product');
 
-Volt::route('mercado/detalles', 'market.product-info')
-    ->name('product-info');
+// Volt::route('mercado', 'market.home')
+//     ->name('mercado');
 
-Volt::route('mercado/carrito', 'market.cart')
-    ->name('cart');
+
+
+// Volt::route('mercado/detalles', 'market.product-info')
+//     ->name('product-info');
+
+Route::get('/encuesta', Encuesta::class)->name('encuesta');
+
+Route::get('/', Content::class)->name('home');
+Route::get('/about', About::class)->name('about');
+
+Route::get('market/home', MarketHome::class)->name('mercado');
+Route::get('market/products', Products::class)->name('productos');
+Route::get('market/shipping-details', ShippingDetails::class)->name('shipping-details');
+Route::get('market/cart', Cart::class)->name('cart');
+
+
+Route::post('stripe/webhook', StripeWebhookHandler::class)->name('stripe-order-succes');
 
 
 
