@@ -1,7 +1,7 @@
 <main>
     <!--? Slider Area Start-->
     <div class="slider-area">
-        <video id="myVideo" autoplay muted loop playsinline
+        <video id="myVideo" autoplay muted loop playsinline poster="landing/assets/video/poster.jpg"
             style="position: absolute;width: 100%;height: 95%;object-fit: cover ">
         </video>
 
