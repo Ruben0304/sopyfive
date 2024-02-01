@@ -11,6 +11,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="landing/assets/img/favicon.ico">
 
 
+    @livewireStyles
+    @livewireScripts
     <link href="../../vendors/prism/prism-okaidia.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com/">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
@@ -49,7 +51,7 @@
     <!-- ===============================================-->
     
 
-    @livewireStyles
+ 
     @stack('styles')
     @laravelPWA
 </head>

@@ -41,7 +41,7 @@ use Livewire\Volt\Volt;
 
 Route::get('/encuesta', Encuesta::class)->name('encuesta');
 
-Route::get('/', Content::class)->name('home');
+Route::get('/', Content::class)->name('home');  
 Route::get('/about', About::class)->name('about');
 
 Route::get('market/home', MarketHome::class)->name('mercado');
@@ -49,7 +49,7 @@ Route::get('market/products', Products::class)->name('productos');
 Route::get('market/shipping-details', ShippingDetails::class)->name('shipping-details');
 Route::get('market/cart', Cart::class)->name('cart');
 
-
+Route::view('/offline', 'vendor/laravelpwa/offline')->name('offline');
 Route::post('stripe/webhook', StripeWebhookHandler::class)->name('stripe-order-succes');
 
 

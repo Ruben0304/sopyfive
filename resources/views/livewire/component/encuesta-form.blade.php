@@ -179,11 +179,11 @@
     </div>
     <div class="form-floating mb-3">
         <p>Al participar, automáticamente estás en la lista para ganar tu premio.</p>
-        <p>Te enviaremos la fecha y hora exactas del sorteo a tu Correo Electrónico:</p>
+        <p>Te enviaremos la fecha y hora exactas del sorteo a tu Whatsapp o correo Electrónico:</p>
         <div class="mb-3">
             {{-- <label class="form-label" for="basic-form-name">Nombre Completo:</label> --}}
             <input wire:model='form.email_phone' class="form-control" id="basic-form-name" type="email"
-                placeholder="Introduce tu correo electrónico" />
+                placeholder="Introduce tu whatsapp o correo electrónico" />
         </div>
 
     </div>

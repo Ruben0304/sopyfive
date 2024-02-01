@@ -1,28 +1,13 @@
 <form class="login100-form validate-form" wire:submit="register">
     <div style="display: inline-grid">
-        {{-- @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach --}}
-        @error('form.name')
-            <!-- Mostrar el error del campo nombre -->
-            <span class="text-danger">{{ $message }}</span> <!-- Mostrar el mensaje de error -->
-        @enderror
-        @error('form.email')
-            <!-- Mostrar el error del campo nombre -->
-            <span class="text-danger">{{ $message }}</span> <!-- Mostrar el mensaje de error -->
-        @enderror
-        @error('form.password')
-            <!-- Mostrar el error del campo nombre -->
-            <span class="text-danger">{{ $message }}</span> <!-- Mostrar el mensaje de error -->
-        @enderror
-        @error('form.password_confirmation')
-            <!-- Mostrar el error del campo nombre -->
-            <span class="text-danger">{{ $message }}</span> <!-- Mostrar el mensaje de error -->
-        @enderror
+        @foreach ($errors->all() as $error)
+            <span class="text-danger">{{ $error }}</span> <!-- Mostrar el mensaje de error -->
+        @endforeach
+
     </div>
 
     <span class="login100-form-title p-b-49">
-        Entrar
+        Registrarse
     </span>
     <div class="wrap-input100 validate-input m-b-23" data-validate = "Username is required">
         <span class="label-input100">Nombre</span>
@@ -46,7 +31,7 @@
 
     <div class="wrap-input100 validate-input  m-b-23 " data-validate="Password is required">
         <span class="label-input100">Confirmar contraseña</span>
-        <input class="input100" type="password" name="pass" placeholder="Repita la contraseña"
+        <input class="input100" type="password" placeholder="Repita la contraseña"
             wire:model="form.password_confirmation">
         <span class="focus-input100" data-symbol="&#xf190;"></span>
     </div>

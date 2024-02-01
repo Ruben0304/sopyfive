@@ -38,6 +38,14 @@
                                         </li>
                                         <li><a href="{{ route('about') }}">Sobre Nosotros</a></li>
                                         @auth
+                                            <li><a  href="{{ route('logout') }}">Salir</a></li>
+                                        @else
+                                            <li ><a  href="{{ route('login') }}">Entrar</a></li>
+                                            <li ><a href="{{ route('register') }}">Registrarse</a></li>
+                                        @endauth
+
+
+                                        @auth
                                             <li style="display:inline-flex; align-items:center"><a
                                                     href="{{ route('about') }}">0.0 </a><img width="20" height="20"
                                                     src="landing/assets/img/coin.png" alt="circled-v" /> </li>
@@ -46,14 +54,14 @@
                                     </ul>
                                 </nav>
                             </div>
-                            <div class="header-right-btn f-right d-none d-lg-block ml-15">
-                                @auth
-                                    <a href="{{ route('logout') }}" class="btn header-btn">Salir</a>
-                                @else
-                                    <a href="{{ route('register') }}" class="btn header-btn">Entrar/Registrarse</a>
-                                @endauth
+{{--                            <div class="header-right-btn f-right d-none d-lg-block ml-15">--}}
+{{--                                @auth--}}
+{{--                                    <a href="{{ route('logout') }}" class="btn header-btn">Salir</a>--}}
+{{--                                @else--}}
+{{--                                    <a href="{{ route('register') }}" class="btn header-btn">Entrar/Registrarse</a>--}}
+{{--                                @endauth--}}
 
-                            </div>
+{{--                            </div>--}}
                         </div>
                     </div>
                     <!-- Mobile Menu -->
@@ -66,3 +74,11 @@
     </div>
     <!-- Header End -->
 </header>
+
+{{--@push('styles')--}}
+{{--    @media (min-width: 1024px) {--}}
+{{--    .no-desktop {--}}
+{{--    display: none;--}}
+{{--    }--}}
+{{--    }--}}
+{{--@endpush--}}

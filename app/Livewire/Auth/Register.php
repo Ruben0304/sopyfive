@@ -19,7 +19,6 @@ class Register extends Component
 
         $this->form->register();
 
-        Session::regenerate();
 
         $this->redirect(
             session('url.intended', route('home'))
@@ -29,6 +28,6 @@ class Register extends Component
     #[Layout('layouts.auth')]
     public function render()
     {
-        return view('livewire.auth.register');
+        return view('livewire.auth.register')->layout('layouts.auth');
     }
 }

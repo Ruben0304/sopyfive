@@ -10,6 +10,8 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="landing/assets/img/favicon.ico">
 
+    @livewireStyles
+    @livewireScripts
     <!-- CSS here -->
     <link rel="stylesheet" href="landing/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="landing/assets/css/owl.carousel.min.css">
@@ -25,6 +27,7 @@
     <link rel="stylesheet" href="landing/assets/css/nice-select.css">
     <link rel="stylesheet" href="landing/assets/css/style.css">
     @laravelPWA
+    @stack('styles')
 </head>
 
 <body>
@@ -44,7 +47,8 @@
     {{-- NAVEGACION --}}
     <livewire:landing.navigation>
 
-        {{ $slot }}
+        {{ $slot}}
+        @yield('content')
 
         {{-- FOOTER --}}
         <livewire:landing.footer>

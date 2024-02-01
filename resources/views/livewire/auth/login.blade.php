@@ -1,18 +1,13 @@
 <form class="login100-form validate-form" wire:submit="login">
-    @error('form.email')
-        <!-- Mostrar el error del campo nombre -->
-        <span class="text-danger">{{ $message }}</span> <!-- Mostrar el mensaje de error -->
-    @enderror
-    @error('form.password')
-        <!-- Mostrar el error del campo nombre -->
-        <span class="text-danger">{{ $message }}</span> <!-- Mostrar el mensaje de error -->
-    @enderror
+    @foreach ($errors->all() as $error)
+        <span class="text-danger">{{ $error }}</span> <!-- Mostrar el mensaje de error -->
+    @endforeach
 
     <span class="login100-form-title p-b-49">
         Entrar
     </span>
 
-    <div class="wrap-input100 validate-input m-b-23" >
+    <div class="wrap-input100 validate-input m-b-23">
         <span class="label-input100">Email</span>
         <input class="input100" type="text" type="email" placeholder="Escriba su email" wire:model="form.email">
         <span class="focus-input100" data-symbol="@"></span>

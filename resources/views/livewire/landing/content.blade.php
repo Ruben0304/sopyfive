@@ -1,12 +1,13 @@
 <main>
     <!--? Slider Area Start-->
     <div class="slider-area">
-        <video id="myVideo" autoplay muted loop playsinline style="position: absolute;width: 100%;height: 95%;object-fit: cover ">
+        <video id="myVideo" autoplay muted loop playsinline
+            style="position: absolute;width: 100%;height: 95%;object-fit: cover ">
         </video>
-        
+
         <script>
             var video = document.getElementById('myVideo');
-        
+
             function setVideoSource() {
                 if (window.innerWidth <= 600) {
                     video.src = "landing/assets/video/m.mp4";
@@ -14,11 +15,11 @@
                     video.src = "landing/assets/video/720.mp4";
                 }
             }
-        
+
             window.onresize = setVideoSource;
             setVideoSource();
         </script>
-        
+
 
         <!-- Slider Single -->
         <livewire:landing.slider>
@@ -172,10 +173,13 @@
     <!--? video_start -->
     <div class="container">
         <div class="video-area section-bg2 d-flex align-items-center"
-            data-background="landing/assets/img/gallery/video-bg.png">
+            data-background="landing/assets/img/gallery/video.jpg"
+            style="width: 80%;
+            border-radius: 25px;
+            margin-left: 10%;">
             <div class="video-wrap position-relative">
                 <div class="video-icon">
-                    <a class="popup-video btn-icon" href=""><i class="fas fa-play"></i></a>
+                    <a class="popup-video btn-icon" href="https://youtu.be/DoRRmaMGdiI"><i class="fas fa-play"></i></a>
                 </div>
             </div>
         </div>

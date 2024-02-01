@@ -7,9 +7,9 @@ use Livewire\Attributes\Layout;
 
 class MarketHome extends Component
 {
-    #[Layout('layouts.market')]
+    
     public function render()
     {
-        return view('livewire.market.market-home');
+        return view('livewire.market.market-home')->layout('layouts.market');
     }
 }

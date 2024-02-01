@@ -10,7 +10,7 @@ use Livewire\Attributes\Layout;
 class ShippingDetails extends Component
 {
 
-    #[Layout('layouts.market')]
+    
     public $user_id;
     public $name;
     public $phone;
@@ -31,6 +31,6 @@ class ShippingDetails extends Component
 
     public function render()
     {
-        return view('livewire.market.shipping-details');
+        return view('livewire.market.shipping-details')->layout('layouts.market');;
     }
 }
