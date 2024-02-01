@@ -8,7 +8,7 @@
     <title>SOP&Five</title>
     <meta name="description" content="">
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="landing/assets/img/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="landing/assets/img/32.ico">
 
     @livewireStyles
     @livewireScripts
