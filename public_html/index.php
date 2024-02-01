@@ -31,11 +31,8 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 |
 */
 
-<<<<<<<< HEAD:public_html/index.php
 require __DIR__.'../vendor/autoload.php';
-========
-require __DIR__.'/laravel/vendor/autoload.php';
->>>>>>>> 1bdcbc9b141e7576252bf0eda2cd352d1efde9c6:index.php
+
 
 /*
 |--------------------------------------------------------------------------
@@ -48,11 +45,8 @@ require __DIR__.'/laravel/vendor/autoload.php';
 |
 */
 
-<<<<<<<< HEAD:public_html/index.php
+
 $app = require_once __DIR__.'../bootstrap/app.php';
-========
-$app = require_once __DIR__.'/laravel/bootstrap/app.php';
->>>>>>>> 1bdcbc9b141e7576252bf0eda2cd352d1efde9c6:index.php
 
 $kernel = $app->make(Kernel::class);
 
