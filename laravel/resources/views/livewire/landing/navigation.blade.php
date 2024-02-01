@@ -22,9 +22,9 @@
 
                                     <ul id="navigation">
                                         <li><a href="{{ route('home') }}">Inicio</a></li>
-                                        <li><a href="{{ route('mercado') }}">Mercado</a></li>
+                                        <li><a href="#">Mercado (soon)</a></li>
                                         {{-- <li><a href="services.html">Comunidades</a></li> --}}
-                                        <li><a href="blog.html">Comunidades</a>
+                                        <li><a href="#">Comunidades (soon)</a>
                                             <ul class="submenu">
                                                 <li><a href="blog.html">Nutrición</a></li>
                                                 <li><a href="blog_details.html">Actividad Física</a></li>
