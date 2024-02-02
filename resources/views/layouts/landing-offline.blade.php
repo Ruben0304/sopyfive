@@ -47,8 +47,8 @@
     {{-- NAVEGACION --}}
     <livewire:landing.navigation>
 
-        {{ $slot}}
-       
+        
+        @yield('content')
 
         {{-- FOOTER --}}
         <livewire:landing.footer>
