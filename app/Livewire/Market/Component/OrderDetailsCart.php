@@ -48,7 +48,8 @@ class OrderDetailsCart extends Component
 
     public function mount()
     {
-        $this->shipping_details = Auth::user()->shippingDetails;
+        $this->shipping_details = Auth::check() ? Auth::user()->shippingDetails : null;
+
         $this->updateSummary();
     }
 
@@ -93,9 +94,9 @@ class OrderDetailsCart extends Component
             'line_items' => $lineItems,
             'mode' => 'payment',
             'metadata' => [
-                'order_id' => 1, // Incluir el ID de la orden como metadato
+                'order_id' => 5, // Incluir el ID de la orden como metadato
             ],
-            'success_url' => route('home'),
+            'success_url' => route('stripe-order-succes'),
             'cancel_url' => route('home'),
         ]);
 
