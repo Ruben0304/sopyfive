@@ -62,23 +62,32 @@ Route::get('/google/redirect', function () {
 Route::get('/google/callback', function () {
     $googleUser = Socialite::driver('google')->user();
 
-    // Buscar o crear el usuario en la base de datos
-    $user = User::updateOrCreate([
-        'google_id' => $googleUser->getId(),
-    ], [
-        'name' => $googleUser->getName(),
-        'email' => $googleUser->getEmail(),
-    ]);
-
-    // Buscar o crear el registro en la tabla social_accounts
-    $socialAccount = SocialAccount::updateOrCreate([
+    // Buscar el registro en la tabla social_accounts
+    $socialAccount = SocialAccount::find([
         'provider' => 'google',
         'provider_id' => $googleUser->getId(),
-    ], [
-        'token' => $googleUser->token,
-        'refresh_token' => $googleUser->refreshToken,
-        'user_id' => $user->id, // Aquí usas el valor de user_id
     ]);
+
+
+    if ($socialAccount) {
+        // Obtener el usuario asociado al registro
+        $user = $socialAccount->user;
+    } else {
+        // Crear un usuario en la base de datos
+        $user = User::create([
+            'name' => $googleUser->getName(),
+            'email' => $googleUser->getEmail(),
+        ]);
+
+        // Crear un registro en la tabla social_accounts
+        $socialAccount = SocialAccount::create([
+            'provider' => 'google',
+            'provider_id' => $googleUser->getId(),
+            'token' => $googleUser->token,
+            'refresh_token' => $googleUser->refreshToken,
+            'user_id' => $user->id,
+        ]);
+    }
 
     // Iniciar sesión con el usuario
     Auth::login($user);
