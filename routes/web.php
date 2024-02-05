@@ -67,11 +67,11 @@ Route::get('/google/callback', function () {
         'provider' => 'google',
         'provider_id' => $googleUser->getId(),
     ]);
-
+dd($socialAccount);
 
     if ($socialAccount) {
         // Obtener el usuario asociado al registro
-        $user = $socialAccount->user();
+        $user = $socialAccount->user;
     } else {
         // Crear un usuario en la base de datos
         $user = User::create([
