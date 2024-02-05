@@ -71,7 +71,7 @@ Route::get('/google/callback', function () {
 
     if ($socialAccount) {
         // Obtener el usuario asociado al registro
-        $user = $socialAccount->user;
+        $user = $socialAccount->user();
     } else {
         // Crear un usuario en la base de datos
         $user = User::create([
