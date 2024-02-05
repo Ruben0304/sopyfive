@@ -3,6 +3,8 @@
 namespace App\Livewire\Market\Component;
 
 use App\Models\Order;
+use App\Models\OrderItem;
+use App\Models\Payment;
 use App\Models\Product;
 use App\Models\ShippingDetails;
 use App\Models\User;
@@ -61,9 +63,12 @@ class OrderDetailsCart extends Component
         $cartItems = CartFacade::session($sessionId)->getContent();
 
         $lineItems = [];
+        $payment = Payment::create(['method' => 'stripe', 'from' => 'mercado','type'=>'single']);
+        $order = Order::create(['status'=> 'pending','user_id'=> 6,'shipping_details_id' => 1,'payment_id'=>$payment->id]);
 
         foreach ($cartItems as $item) {
             $product = Product::find($item->id);
+            OrderItem::create(['cant' =>$item->quantity,'price'=>$product->price,'product_id'=>$product->id,'order_id'=>$order->id]);
 
             $lineItems[] = [
                 'price_data' => [
@@ -76,6 +81,7 @@ class OrderDetailsCart extends Component
                 ],
                 'quantity' => $item->quantity,
             ];
+
         }
 
         $lineItems[] = [
@@ -94,11 +100,13 @@ class OrderDetailsCart extends Component
             'line_items' => $lineItems,
             'mode' => 'payment',
             'metadata' => [
-                'order_id' => 5, // Incluir el ID de la orden como metadato
+                'order_id' => $order->id, // Incluir el ID de la orden como metadato
             ],
-            'success_url' => route('stripe-order-succes'),
+            'success_url' => route('home'),
             'cancel_url' => route('home'),
         ]);
+
+
 
         return redirect()->to($session->url);
     }
