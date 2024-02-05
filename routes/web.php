@@ -63,11 +63,11 @@ Route::get('/google/callback', function () {
     $googleUser = Socialite::driver('google')->user();
 
     // Buscar el registro en la tabla social_accounts
-    $socialAccount = SocialAccount::find([
+    $socialAccount = SocialAccount::findOrFail([
         'provider' => 'google',
         'provider_id' => $googleUser->getId(),
     ]);
-dd($socialAccount);
+
 
     if ($socialAccount) {
         // Obtener el usuario asociado al registro
