@@ -27,6 +27,12 @@ class User extends Authenticatable
         return $this->hasMany(ShippingDetails::class);
     }
 
+    public function socialAccounts()
+    {
+        return $this->hasMany(SocialAccount::class);
+    }
+
+
     /**
      * The attributes that should be hidden for serialization.
      *

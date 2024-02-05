@@ -15,6 +15,7 @@ use Livewire\Volt\Volt;
 use Laravel\Socialite\Facades\Socialite;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use App\Models\SocialAccount;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -56,20 +57,30 @@ Route::post('stripe/webhook', StripeWebhookHandler::class)->name('stripe-order-s
 
 Route::get('/google/redirect', function () {
     return Socialite::driver('google')->redirect();
-});
+})->name('google-login');
 
 Route::get('/google/callback', function () {
-    $g_user = Socialite::driver('google')->user();
-    $user = User::updateOrCreate([
-        'google_id' => $g_user->id,
+    $googleUser = Socialite::driver('google')->user();
+
+
+    // Buscar o crear el registro en la tabla social_accounts
+    $socialAccount = SocialAccount::firstOrCreate([
+        'provider' => 'google',
+        'provider_id' => $googleUser->getId(),
     ], [
-        'name' => $g_user->name,
-        'email' => $g_user->email,
-        'google_token' => $g_user->token,
-        'google_refresh_token' => $g_user>refreshToken,
+        'token' => $googleUser->token,
+        'refresh_token' => $googleUser->refreshToken,
     ]);
 
+// Obtener el usuario asociado al registro, o crear uno nuevo si no existe
+    $user = $socialAccount->user()->firstOrCreate([
+        'name' => $googleUser->getName(),
+        'email' => $googleUser->getEmail(),
+    ]);
+
+// Iniciar sesión con el usuario
     Auth::login($user);
+
 
     return redirect('/');
 });

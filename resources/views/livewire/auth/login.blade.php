@@ -48,7 +48,7 @@
     <div class="flex-c-m">
 
 
-        <a href="#" class="login100-social-item bg3">
+        <a href="{{route('google-login')}}" class="login100-social-item bg3">
             <i class="fa fa-google"></i>
         </a>
     </div>
