@@ -12,7 +12,9 @@ use App\Livewire\Market\Stripe\StripeWebhookHandler;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
-
+use Laravel\Socialite\Facades\Socialite;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -41,7 +43,7 @@ use Livewire\Volt\Volt;
 
 Route::get('/encuesta', Encuesta::class)->name('encuesta');
 
-Route::get('/', Content::class)->name('home');  
+Route::get('/', Content::class)->name('home');
 Route::get('/about', About::class)->name('about');
 
 Route::get('market/home', MarketHome::class)->name('mercado');
@@ -52,7 +54,25 @@ Route::get('market/cart', Cart::class)->name('cart');
 Route::view('/offline', 'vendor/laravelpwa/offline')->name('offline');
 Route::post('stripe/webhook', StripeWebhookHandler::class)->name('stripe-order-succes');
 
+Route::get('/google/redirect', function () {
+    return Socialite::driver('google')->redirect();
+});
 
+Route::get('/google/callback', function () {
+    $g_user = Socialite::driver('google')->user();
+    $user = User::updateOrCreate([
+        'google_id' => $g_user->id,
+    ], [
+        'name' => $g_user->name,
+        'email' => $g_user->email,
+        'google_token' => $g_user->token,
+        'google_refresh_token' => $g_user>refreshToken,
+    ]);
+
+    Auth::login($user);
+
+    return redirect('/');
+});
 
 
 Route::view('dashboard', 'dashboard')
