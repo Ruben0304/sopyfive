@@ -63,7 +63,7 @@ Route::get('/google/callback', function () {
     $googleUser = Socialite::driver('google')->user();
 
     // Buscar o crear el usuario en la base de datos
-    $user = User::findOrCreate([
+    $user = User::updateOrCreate([
         'google_id' => $googleUser->getId(),
     ], [
         'name' => $googleUser->getName(),
@@ -71,7 +71,7 @@ Route::get('/google/callback', function () {
     ]);
 
     // Buscar o crear el registro en la tabla social_accounts
-    $socialAccount = SocialAccount::firstOrCreate([
+    $socialAccount = SocialAccount::updateOrCreate([
         'provider' => 'google',
         'provider_id' => $googleUser->getId(),
     ], [
