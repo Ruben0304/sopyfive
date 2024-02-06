@@ -9,7 +9,7 @@ use Livewire\Attributes\On;
 
 class Cart extends Component
 {
-    #[Layout('layouts.market')]
+
     public $cartItems;
 
     public function mount()
@@ -17,6 +17,7 @@ class Cart extends Component
         $sessionId = session()->getId();
         $this->cartItems = CartFacade::session($sessionId)->getContent();
     }
+
 
     #[On('cartDeleted')]
     public function onDeleteCartItems()
@@ -26,6 +27,6 @@ class Cart extends Component
     }
     public function render()
     {
-        return view('livewire.market.cart');
+        return view('livewire.market.cart')->layout('layouts.market');
     }
 }

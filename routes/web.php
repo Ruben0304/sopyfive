@@ -3,19 +3,18 @@
 use App\Livewire\Encuesta;
 use App\Livewire\Landing\About;
 use App\Livewire\Landing\Content;
-use App\Livewire\Market\Admin\AddProduct;
 use App\Livewire\Market\Cart;
 use App\Livewire\Market\MarketHome;
+use App\Livewire\Market\ProductInfo;
 use App\Livewire\Market\Products;
 use App\Livewire\Market\ShippingDetails;
 use App\Livewire\Market\Stripe\StripeWebhookHandler;
-use App\Models\Product;
-use Illuminate\Support\Facades\Route;
-use Livewire\Volt\Volt;
-use Laravel\Socialite\Facades\Socialite;
+use App\Models\SocialAccount;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-use App\Models\SocialAccount;
+use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,7 +27,6 @@ use App\Models\SocialAccount;
 */
 
 
-
 // Route::view('market/add-product', AddProduct::class);
 
 // Volt::route('mercado/add-product', 'market.add-product')
@@ -36,7 +34,6 @@ use App\Models\SocialAccount;
 
 // Volt::route('mercado', 'market.home')
 //     ->name('mercado');
-
 
 
 // Volt::route('mercado/detalles', 'market.product-info')
@@ -51,13 +48,17 @@ Route::get('market/home', MarketHome::class)->name('mercado');
 Route::get('market/products', Products::class)->name('productos');
 Route::get('market/shipping-details', ShippingDetails::class)->name('shipping-details');
 Route::get('market/cart', Cart::class)->name('cart');
+Route::get('market/product/{producto}', ProductInfo::class)->name('product-info');
 
 Route::view('/offline', 'vendor/laravelpwa/offline')->name('offline');
 Route::post('stripe/webhook', StripeWebhookHandler::class)->name('stripe-order-succes');
 
+
+//google login
 Route::get('/google/redirect', function () {
     return Socialite::driver('google')->redirect();
 })->name('google-login');
+
 
 Route::get('/google/callback', function () {
     $googleUser = Socialite::driver('google')->user();
@@ -100,7 +101,6 @@ Route::get('/google/callback', function () {
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
-
 
 
 require __DIR__ . '/auth.php';

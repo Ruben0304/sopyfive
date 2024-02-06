@@ -12,7 +12,7 @@
                         {{-- <span
                 class="badge bg-success fs--2 product-verified-badge">Verified<span
                     class="fas fa-check ms-1"></span></span> --}}
-                    </div><a class="stretched-link" href="product-details.html">
+                    </div><a class="stretched-link" href="{{route('product-info',['producto' => $producto->id])}}" wire:navigate>
                         <h6 class="mb-2 lh-sm line-clamp-3 product-name">{{ $producto->name }}</h6>
                     </a>
                     <p class="fs--1"><span class="fa fa-star text-warning"></span><span
