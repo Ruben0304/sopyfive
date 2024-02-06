@@ -1,0 +1,4 @@
+ssh -p 65002 u284308183@217.196.55.99
+@Zixelowe1
+cd public_html/laravel
+git pull origin hostinger
