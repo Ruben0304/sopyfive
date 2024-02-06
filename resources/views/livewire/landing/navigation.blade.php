@@ -47,7 +47,7 @@
 
                                         @auth
                                             <li style="display:inline-flex; align-items:center"><a
-                                                    href="{{ route('about') }}">0.0 </a><img width="20" height="20"
+                                                    href="{{ route('about') }}">{{Auth::user()->coins}} </a><img width="20" height="20"
                                                     src="landing/assets/img/coin.png" alt="circled-v" /> </li>
                                         @endauth
 
