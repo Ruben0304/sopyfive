@@ -47,6 +47,7 @@ return array(
     'Spatie\\FlareClient\\' => array($vendorDir . '/spatie/flare-client-php/src'),
     'Spatie\\Backtrace\\' => array($vendorDir . '/spatie/backtrace/src'),
     'SocialiteProviders\\Twitter\\' => array($vendorDir . '/socialiteproviders/twitter'),
+    'SocialiteProviders\\Spotify\\' => array($vendorDir . '/socialiteproviders/spotify'),
     'SocialiteProviders\\Manager\\' => array($vendorDir . '/socialiteproviders/manager/src'),
     'Ramsey\\Uuid\\' => array($vendorDir . '/ramsey/uuid/src'),
     'Ramsey\\Collection\\' => array($vendorDir . '/ramsey/collection/src'),

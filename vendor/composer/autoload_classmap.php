@@ -5325,6 +5325,8 @@ return array(
     'SocialiteProviders\\Manager\\OAuth2\\User' => $vendorDir . '/socialiteproviders/manager/src/OAuth2/User.php',
     'SocialiteProviders\\Manager\\ServiceProvider' => $vendorDir . '/socialiteproviders/manager/src/ServiceProvider.php',
     'SocialiteProviders\\Manager\\SocialiteWasCalled' => $vendorDir . '/socialiteproviders/manager/src/SocialiteWasCalled.php',
+    'SocialiteProviders\\Spotify\\Provider' => $vendorDir . '/socialiteproviders/spotify/Provider.php',
+    'SocialiteProviders\\Spotify\\SpotifyExtendSocialite' => $vendorDir . '/socialiteproviders/spotify/SpotifyExtendSocialite.php',
     'SocialiteProviders\\Twitter\\Provider' => $vendorDir . '/socialiteproviders/twitter/Provider.php',
     'SocialiteProviders\\Twitter\\Server' => $vendorDir . '/socialiteproviders/twitter/Server.php',
     'SocialiteProviders\\Twitter\\TwitterExtendSocialite' => $vendorDir . '/socialiteproviders/twitter/TwitterExtendSocialite.php',

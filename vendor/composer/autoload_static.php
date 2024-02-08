@@ -15,12 +15,12 @@ class ComposerStaticInit149727b0340bb4032b161c5178f3e8e8
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '662a729f963d39afe703c9d9b7ab4a8c' => __DIR__ . '/..' . '/symfony/polyfill-php83/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
-        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
+        'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         '35a6ad97d21e794e7e22a17d806652e4' => __DIR__ . '/..' . '/nunomaduro/termwind/src/Functions.php',
         '3bd81c9b8fcc150b69d8b63b4d2ccf23' => __DIR__ . '/..' . '/spatie/flare-client-php/src/helpers.php',
         '09f6b20656683369174dd6fa83b7e5fb' => __DIR__ . '/..' . '/symfony/polyfill-uuid/bootstrap.php',
@@ -96,6 +96,7 @@ class ComposerStaticInit149727b0340bb4032b161c5178f3e8e8
             'Spatie\\FlareClient\\' => 19,
             'Spatie\\Backtrace\\' => 17,
             'SocialiteProviders\\Twitter\\' => 27,
+            'SocialiteProviders\\Spotify\\' => 27,
             'SocialiteProviders\\Manager\\' => 27,
         ),
         'R' => 
@@ -360,6 +361,10 @@ class ComposerStaticInit149727b0340bb4032b161c5178f3e8e8
         'SocialiteProviders\\Twitter\\' => 
         array (
             0 => __DIR__ . '/..' . '/socialiteproviders/twitter',
+        ),
+        'SocialiteProviders\\Spotify\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/socialiteproviders/spotify',
         ),
         'SocialiteProviders\\Manager\\' => 
         array (
@@ -5921,6 +5926,8 @@ class ComposerStaticInit149727b0340bb4032b161c5178f3e8e8
         'SocialiteProviders\\Manager\\OAuth2\\User' => __DIR__ . '/..' . '/socialiteproviders/manager/src/OAuth2/User.php',
         'SocialiteProviders\\Manager\\ServiceProvider' => __DIR__ . '/..' . '/socialiteproviders/manager/src/ServiceProvider.php',
         'SocialiteProviders\\Manager\\SocialiteWasCalled' => __DIR__ . '/..' . '/socialiteproviders/manager/src/SocialiteWasCalled.php',
+        'SocialiteProviders\\Spotify\\Provider' => __DIR__ . '/..' . '/socialiteproviders/spotify/Provider.php',
+        'SocialiteProviders\\Spotify\\SpotifyExtendSocialite' => __DIR__ . '/..' . '/socialiteproviders/spotify/SpotifyExtendSocialite.php',
         'SocialiteProviders\\Twitter\\Provider' => __DIR__ . '/..' . '/socialiteproviders/twitter/Provider.php',
         'SocialiteProviders\\Twitter\\Server' => __DIR__ . '/..' . '/socialiteproviders/twitter/Server.php',
         'SocialiteProviders\\Twitter\\TwitterExtendSocialite' => __DIR__ . '/..' . '/socialiteproviders/twitter/TwitterExtendSocialite.php',

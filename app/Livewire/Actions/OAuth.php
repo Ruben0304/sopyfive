@@ -24,6 +24,7 @@ class OAuth
         if ($socialAccount) {
             // Obtener el usuario asociado al registro
             $user = $socialAccount->user;
+            Auth::login($user);
         } else {
             if (!User::where(['email' => $googleUser->getEmail()])->exists()) {
                 // Crear un usuario en la base de datos
@@ -47,6 +48,7 @@ class OAuth
             }else{
                 back()->with('error','Email ya existe');
             }
+
         }
     }
 
@@ -64,6 +66,7 @@ class OAuth
         if ($socialAccount) {
             // Obtener el usuario asociado al registro
             $user = $socialAccount->user;
+            Auth::login($user);
         } else {
             if (!User::where(['email' => $twitterUser->getEmail()])->exists()) {
                 // Crear un usuario en la base de datos

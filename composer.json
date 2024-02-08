@@ -17,6 +17,7 @@
         "livewire/livewire": "^3.0",
         "livewire/volt": "^1.0",
         "silviolleite/laravelpwa": "^2.0",
+        "socialiteproviders/spotify": "^4.1",
         "socialiteproviders/twitter": "^4.1"
     },
     "require-dev": {
