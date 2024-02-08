@@ -1,5 +1,5 @@
 <div class="slider-active dot-style">
-    @foreach ($sliders as $slider)
+
         <div class="single-slider d-flex align-items-center slider-height">
 
             <div class="container" >
@@ -15,24 +15,19 @@
                         </a>
                     </div> --}}
                             <div class="hero__caption">
-                                <h1 data-animation="fadeInUp" data-delay=".3s" style="color: white">{{$slider->title}}
+                                <h1 data-animation="fadeInUp" data-delay=".3s" style="color: white">{{$title}}
                                 </h1>
                                 <p data-animation="fadeInUp" data-delay=".6s" style="color: white">
-                                    {{$slider->paragraph}}<br>
+                                    {{$paragraph}}<br>
                                 </p>
-                                @if($slider->id != 1)
-                                <a href="{{route('comunidad',['id' => $slider->id])}}" class="btn" data-animation="fadeInLeft"
-                                    data-delay=".3s" style="background-color: #7D525E" >Ir a ver</a>
-                                @else
-                                    <a href="{{route('encuesta')}}" class="btn" data-animation="fadeInLeft"
-                                       data-delay=".3s" style="background-color: #7D525E" >Recibe un regalo !</a>
-                                @endif
+                                <a href="services.html" class="btn" data-animation="fadeInLeft"
+                                   data-delay=".3s" style="background-color: #7D525E">Ver suplementos</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    @endforeach
+
 
 </div>

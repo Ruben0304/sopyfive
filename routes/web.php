@@ -42,6 +42,7 @@ use Laravel\Socialite\Facades\Socialite;
 Route::get('/encuesta', Encuesta::class)->name('encuesta');
 
 Route::get('/', Content::class)->name('home');
+
 Route::get('/about', About::class)->name('about');
 
 Route::get('market/home', MarketHome::class)->name('mercado');
@@ -50,16 +51,18 @@ Route::get('market/shipping-details', ShippingDetails::class)->name('shipping-de
 Route::get('market/cart', Cart::class)->name('cart');
 Route::get('market/product/{producto}', ProductInfo::class)->name('product-info');
 
+
+
 Route::view('/offline', 'vendor/laravelpwa/offline')->name('offline');
 Route::post('stripe/webhook', StripeWebhookHandler::class)->name('stripe-order-succes');
 
 
-
-
-
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
-
-
 require __DIR__ . '/auth.php';
+
+//parametros
+Route::get('/{id}', Content::class)->name('comunidad');
+
+
+
+
+

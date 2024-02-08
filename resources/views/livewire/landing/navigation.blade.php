@@ -22,27 +22,28 @@
 
                                     <ul id="navigation">
                                         <li><a href="{{ route('home') }}">Inicio</a></li>
-                                        <li><a href="#">Mercado (soon)</a></li>
+                                        <li><a href="{{ route('about') }}">Conócenos</a></li>
                                         {{-- <li><a href="services.html">Comunidades</a></li> --}}
-                                        <li><a href="#">Comunidades (soon)</a>
+                                        <li><a href="#">Tu comunidad</a>
                                             <ul class="submenu">
-                                                <li><a href="blog.html">Nutrición</a></li>
-                                                <li><a href="blog_details.html">Actividad Física</a></li>
-                                                <li><a href="elements.html">Sueño y Relajación</a></li>
-                                                <li><a href="elements.html">Manejo del Estrés</a></li>
-                                                <li><a href="elements.html">Proyecto de Vida</a></li>
+                                                <li><a href="{{route('comunidad',['id' =>2])}}">Nutrición</a></li>
+                                                <li><a href="{{route('comunidad',['id' => 3])}}">Actividad Física</a></li>
+                                                <li><a href="{{route('comunidad',['id' => 4])}}">Sueño y Relajación</a></li>
+                                                <li><a href="{{route('comunidad',['id' => 5])}}">Manejo del Estrés</a></li>
+                                                <li><a href="{{route('comunidad',['id' => 6])}}">Proyecto de Vida</a></li>
 
 
 
                                             </ul>
                                         </li>
-                                        <li><a href="{{ route('about') }}">Sobre Nosotros</a></li>
-                                        @auth
-                                            <li><a  href="{{ route('logout') }}">Salir</a></li>
-                                        @else
-                                            <li ><a  href="{{ route('login') }}">Entrar</a></li>
-                                            <li ><a href="{{ route('register') }}">Registrarse</a></li>
-                                        @endauth
+                                        <li><a href="#">Shop (pronto)</a></li>
+                                        <li><a href="#">Tus profesionales (pronto)</a></li>
+{{--                                        @auth--}}
+{{--                                            <li><a  href="{{ route('logout') }}">Salir</a></li>--}}
+{{--                                        @else--}}
+{{--                                            <li ><a  href="{{ route('login') }}">Entrar</a></li>--}}
+{{--                                            <li ><a href="{{ route('register') }}">Registrarse</a></li>--}}
+{{--                                        @endauth--}}
 
 
                                         @auth
@@ -54,14 +55,14 @@
                                     </ul>
                                 </nav>
                             </div>
-{{--                            <div class="header-right-btn f-right d-none d-lg-block ml-15">--}}
-{{--                                @auth--}}
-{{--                                    <a href="{{ route('logout') }}" class="btn header-btn">Salir</a>--}}
-{{--                                @else--}}
-{{--                                    <a href="{{ route('register') }}" class="btn header-btn">Entrar/Registrarse</a>--}}
-{{--                                @endauth--}}
+                            <div class="header-right-btn f-right d-none d-lg-block ml-15">
+                                @auth
+                                    <a href="{{ route('logout') }}" class="btn header-btn">Salir</a>
+                                @else
+                                    <a href="{{ route('login') }}" class="btn header-btn">Entrar/Registrarse</a>
+                                @endauth
 
-{{--                            </div>--}}
+                            </div>
                         </div>
                     </div>
                     <!-- Mobile Menu -->

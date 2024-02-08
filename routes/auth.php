@@ -1,6 +1,6 @@
 <?php
 
-use App\Livewire\Actions\GoogleCallback;
+use App\Livewire\Actions\OAuth;
 use App\Livewire\Actions\Logout;
 use App\Livewire\Auth\Login;
 use App\Livewire\Auth\Register;
@@ -23,11 +23,29 @@ Route::get('/google/redirect', function () {
 })->name('google-login');
 
 
-Route::get('/google/callback', function (GoogleCallback $callback) {
-    $callback();
+Route::get('/google/callback', function () {
+    OAuth::iniciarConGoogle();
 
     return redirect('/');
 });
+
+
+//twitter login
+Route::get('/twitter/redirect', function () {
+    return Socialite::driver('twitter')->redirect();
+})->name('twitter-login');
+
+
+Route::get('/twitter/callback', function () {
+   OAuth::iniciarConTwitter();
+
+    return redirect('/');
+});
+
+
+
+
+
 
 
 Route::middleware('auth')->group(function () {

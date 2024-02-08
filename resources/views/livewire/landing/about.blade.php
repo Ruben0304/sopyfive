@@ -2,16 +2,16 @@
 
     <section class="sample-text-area">
         <div class="container box_1170">
-            <h3 class="text-heading">Sobre Nosotros: Nuestra Historia Real en SOPyFIVE</h3>
+            <h3 class="text-heading">Nuestra Historia Real en SOPyFIVE</h3>
             <p class="sample-text">
-                Bienvenido a <b>SOPyFIVE</b>, donde damos vida a la ciencia del bienestar con un enfoque real y
+                Bienvenida a <b>SOPyFIVE</b>, donde damos vida a la ciencia del bienestar con un enfoque real y
                 accesible. Aquí, te invitamos a conocer quiénes somos y por qué estamos comprometidas con tu salud y
                 felicidad.
 
             </p>
         </div>
         <div class="container box_1170">
-            <h3 class="text-heading">Nuestra Historia: Mujeres con SOP, Creando para Mujeres con SOP</h3>
+            <h3 class="text-heading">Nuestra Historia: Mujeres con SOP, creando para Mujeres con SOP</h3>
             <p class="sample-text">
                 En <b>SOPyFIVE</b>, somos mujeres con SOP que han caminado por los desafíos únicos que esta condición
                 presenta. Nuestro sitio no es solo una plataforma, sino un testimonio viviente de experiencias reales y

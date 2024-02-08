@@ -1,29 +1,35 @@
 <main>
     <!--? Slider Area Start-->
     <div class="slider-area">
-        <video id="myVideo" autoplay muted loop playsinline poster="landing/assets/video/poster.jpg"
-            style="position: absolute;width: 100%;height: 95%;object-fit: cover ">
-        </video>
+        @if($id == null)
+            <video id="myVideo" autoplay muted loop playsinline
+                   style="position: absolute;width: 100%;height: 95%;object-fit: cover ">
+            </video>
 
-        <script>
-            var video = document.getElementById('myVideo');
+            <script>
+                var video = document.getElementById('myVideo');
 
-            function setVideoSource() {
-                if (window.innerWidth <= 600) {
-                    video.src = "landing/assets/video/m.mp4";
-                } else {
-                    video.src = "landing/assets/video/720.mp4";
+                function setVideoSource() {
+                    if (window.innerWidth <= 600) {
+                        video.src = "landing/assets/video/m.mp4";
+                    } else {
+                        video.src = "landing/assets/video/720.mp4";
+                    }
                 }
-            }
 
-            window.onresize = setVideoSource;
-            setVideoSource();
-        </script>
+                window.onresize = setVideoSource;
+                setVideoSource();
 
 
-        <!-- Slider Single -->
-        <livewire:landing.slider>
+            </script>
 
+
+            <!-- Slider Single -->
+            <livewire:landing.slider>
+                @else
+                    <img src="landing/assets/img/slider/{{$id}}.jpg"  style="position: absolute;width: 100%;height: 95%;object-fit: cover " >
+                    <livewire:landing.hero :$id>
+        @endif
     </div>
 
 
@@ -33,8 +39,10 @@
                 <div class="row align-items-center justify-content-between">
                     <div class="col-xl-7 col-lg-9 col-md-8">
                         <div class="wantToWork-caption wantToWork-caption2">
-                            <h2>Qué encontrarás ?</h2>
-                            <p>Salud integral, vida plena<br> y equilibrada</p>
+                            <h2>¿ Qué encontrarás ?</h2>
+                            <p> Todo lo que necesitas para tu bienestar en un solo lugar,ahorrando tiempo y dinero en
+                                búsquedas dispersas: desde expertos y comunidad,<br> hasta recursos, tienda y mucho más.
+                            </p>
                         </div>
                     </div>
                     <div class="col-xl-2 col-lg-3 col-md-4">
@@ -173,8 +181,8 @@
     <!--? video_start -->
     <div class="container">
         <div class="video-area section-bg2 d-flex align-items-center"
-            data-background="landing/assets/img/gallery/video.jpg"
-            style="width: 80%;
+             data-background="landing/assets/img/gallery/video.jpg"
+             style="width: 80%;
             border-radius: 25px;
             margin-left: 10%;">
             <div class="video-wrap position-relative">
