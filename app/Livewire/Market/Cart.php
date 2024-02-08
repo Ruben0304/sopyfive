@@ -16,6 +16,8 @@ class Cart extends Component
     {
         $sessionId = session()->getId();
         $this->cartItems = CartFacade::session($sessionId)->getContent();
+
+
     }
 
 
