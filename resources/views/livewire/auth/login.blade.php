@@ -51,6 +51,9 @@
         <a href="{{route('google-login')}}" class="login100-social-item bg3">
             <i class="fa fa-google"></i>
         </a>
+        <a href="{{route('twitter-login')}}" class="login100-social-item bg1">
+            <i class="fa fa-twitter"></i>
+        </a>
     </div>
 
     <div class="flex-col-c p-t-155">
