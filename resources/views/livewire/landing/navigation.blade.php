@@ -38,12 +38,12 @@
                                         </li>
                                         <li><a href="#">Shop (pronto)</a></li>
                                         <li><a href="#">Tus profesionales (pronto)</a></li>
-{{--                                        @auth--}}
-{{--                                            <li><a  href="{{ route('logout') }}">Salir</a></li>--}}
-{{--                                        @else--}}
-{{--                                            <li ><a  href="{{ route('login') }}">Entrar</a></li>--}}
-{{--                                            <li ><a href="{{ route('register') }}">Registrarse</a></li>--}}
-{{--                                        @endauth--}}
+                                        @auth
+                                            <li><a  href="{{ route('logout') }}" id="salirMovil">Salir</a></li>
+                                        @else
+                                            <li ><a  href="{{ route('login') }}" id="entrarMovil">Entrar/Registrarse</a></li>
+
+                                        @endauth
 
 
                                         @auth
@@ -55,13 +55,35 @@
                                     </ul>
                                 </nav>
                             </div>
-                            <div class="header-right-btn f-right d-none d-lg-block ml-15">
+                            <div class="header-right-btn f-right d-none d-lg-block ml-15" >
                                 @auth
-                                    <a href="{{ route('logout') }}" class="btn header-btn">Salir</a>
+                                    <a href="{{ route('logout') }}" class="btn header-btn" >Salir</a>
                                 @else
-                                    <a href="{{ route('login') }}" class="btn header-btn">Entrar/Registrarse</a>
+                                    <a href="{{ route('login') }}" class="btn header-btn" >Entrar/Registrarse </a>
                                 @endauth
 
+{{--                                    <script>--}}
+
+{{--                                        var salirMovil = document.getElementById('salirMovil');--}}
+{{--                                        var entrarMovil = document.getElementById('entrarMovil');--}}
+
+
+{{--                                        function setVideoSource() {--}}
+{{--                                            if (window.innerWidth <= 600) {--}}
+{{--                                                entrarMovil.style.display="block";--}}
+{{--                                                salirMovil.style.display="block";--}}
+
+{{--                                            } else {--}}
+{{--                                                entrarMovil.style.display="none";--}}
+{{--                                                salirMovil.style.display="none";--}}
+{{--                                            }--}}
+{{--                                        }--}}
+
+{{--                                        window.onresize = setVideoSource;--}}
+{{--                                        setVideoSource();--}}
+
+
+{{--                                    </script>--}}
                             </div>
                         </div>
                     </div>
