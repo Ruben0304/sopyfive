@@ -25,7 +25,7 @@ class OAuth
             // Obtener el usuario asociado al registro
             $user = $socialAccount->user;
         } else {
-            if (!User::where(['email' => $googleUser->getEmail()])->exist()) {
+            if (!User::where(['email' => $googleUser->getEmail()])->exists()) {
                 // Crear un usuario en la base de datos
                 $user = User::create([
                     'name' => $googleUser->getName(),
@@ -65,7 +65,7 @@ class OAuth
             // Obtener el usuario asociado al registro
             $user = $socialAccount->user;
         } else {
-            if (!User::where(['email' => $twitterUser->getEmail()])->exist()) {
+            if (!User::where(['email' => $twitterUser->getEmail()])->exists()) {
                 // Crear un usuario en la base de datos
                 $user = User::create([
                     'name' => $twitterUser->getName(),
