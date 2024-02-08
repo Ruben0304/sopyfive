@@ -42,13 +42,18 @@
             </div>
         </div>
     </div>
+    @if (session('error'))
+        <script>
+            alert('{{ session('error') }}');
+        </script>
+    @endif
     <!-- Preloader Start -->
 
     {{-- NAVEGACION --}}
     <livewire:landing.navigation>
 
         {{ $slot}}
-       
+
 
         {{-- FOOTER --}}
         <livewire:landing.footer>
