@@ -93,4 +93,45 @@ class OAuth
         }
     }
 
+    public static function iniciarConTikTok ():void {
+        $twitterUser = Socialite::driver('tiktok')->user();
+
+        // Buscar el registro en la tabla social_accounts
+
+        $socialAccount = SocialAccount::where([
+            'provider' => 'tiktok',
+            'provider_id' => $twitterUser->getId(),
+        ])->first();
+
+
+        if ($socialAccount) {
+            // Obtener el usuario asociado al registro
+            $user = $socialAccount->user;
+            Auth::login($user);
+        } else {
+            if (!User::where(['email' => $twitterUser->getEmail()])->exists()) {
+                // Crear un usuario en la base de datos
+                $user = User::create([
+                    'name' => $twitterUser->getName(),
+                    'email' => $twitterUser->getNickname(),
+                ]);
+
+                // Crear un registro en la tabla social_accounts
+                $socialAccount = SocialAccount::create([
+                    'provider' => 'tiktok',
+                    'provider_id' => $twitterUser->getId(),
+                    'token' => $twitterUser->token,
+                    'refresh_token' => $twitterUser->refreshToken,
+                    'user_id' => $user->id,
+
+                ]);
+
+                // Iniciar sesión con el usuario
+                Auth::login($user);
+            }else{
+                back()->with('error','Email ya existe');
+            }
+        }
+    }
+
 }

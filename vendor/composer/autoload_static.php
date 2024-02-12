@@ -13,9 +13,9 @@ class ComposerStaticInit149727b0340bb4032b161c5178f3e8e8
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
+        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
-        '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
         '662a729f963d39afe703c9d9b7ab4a8c' => __DIR__ . '/..' . '/symfony/polyfill-php83/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
@@ -96,6 +96,7 @@ class ComposerStaticInit149727b0340bb4032b161c5178f3e8e8
             'Spatie\\FlareClient\\' => 19,
             'Spatie\\Backtrace\\' => 17,
             'SocialiteProviders\\Twitter\\' => 27,
+            'SocialiteProviders\\TikTok\\' => 26,
             'SocialiteProviders\\Spotify\\' => 27,
             'SocialiteProviders\\Manager\\' => 27,
         ),
@@ -361,6 +362,10 @@ class ComposerStaticInit149727b0340bb4032b161c5178f3e8e8
         'SocialiteProviders\\Twitter\\' => 
         array (
             0 => __DIR__ . '/..' . '/socialiteproviders/twitter',
+        ),
+        'SocialiteProviders\\TikTok\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/socialiteproviders/tiktok',
         ),
         'SocialiteProviders\\Spotify\\' => 
         array (
@@ -636,6 +641,7 @@ class ComposerStaticInit149727b0340bb4032b161c5178f3e8e8
         'App\\Livewire\\Forms\\LoginForm' => __DIR__ . '/../..' . '/app/Livewire/Forms/LoginForm.php',
         'App\\Livewire\\Forms\\RegisterForm' => __DIR__ . '/../..' . '/app/Livewire/Forms/RegisterForm.php',
         'App\\Livewire\\Landing\\About' => __DIR__ . '/../..' . '/app/Livewire/Landing/About.php',
+        'App\\Livewire\\Landing\\Blog' => __DIR__ . '/../..' . '/app/Livewire/Landing/Blog.php',
         'App\\Livewire\\Landing\\Content' => __DIR__ . '/../..' . '/app/Livewire/Landing/Content.php',
         'App\\Livewire\\Landing\\Footer' => __DIR__ . '/../..' . '/app/Livewire/Landing/Footer.php',
         'App\\Livewire\\Landing\\Hero' => __DIR__ . '/../..' . '/app/Livewire/Landing/Hero.php',
@@ -5928,6 +5934,8 @@ class ComposerStaticInit149727b0340bb4032b161c5178f3e8e8
         'SocialiteProviders\\Manager\\SocialiteWasCalled' => __DIR__ . '/..' . '/socialiteproviders/manager/src/SocialiteWasCalled.php',
         'SocialiteProviders\\Spotify\\Provider' => __DIR__ . '/..' . '/socialiteproviders/spotify/Provider.php',
         'SocialiteProviders\\Spotify\\SpotifyExtendSocialite' => __DIR__ . '/..' . '/socialiteproviders/spotify/SpotifyExtendSocialite.php',
+        'SocialiteProviders\\TikTok\\Provider' => __DIR__ . '/..' . '/socialiteproviders/tiktok/Provider.php',
+        'SocialiteProviders\\TikTok\\TikTokExtendSocialite' => __DIR__ . '/..' . '/socialiteproviders/tiktok/TikTokExtendSocialite.php',
         'SocialiteProviders\\Twitter\\Provider' => __DIR__ . '/..' . '/socialiteproviders/twitter/Provider.php',
         'SocialiteProviders\\Twitter\\Server' => __DIR__ . '/..' . '/socialiteproviders/twitter/Server.php',
         'SocialiteProviders\\Twitter\\TwitterExtendSocialite' => __DIR__ . '/..' . '/socialiteproviders/twitter/TwitterExtendSocialite.php',

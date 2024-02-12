@@ -43,6 +43,18 @@ Route::get('/twitter/callback', function () {
 });
 
 
+Route::get('/tiktok/redirect', function () {
+    return Socialite::driver('tiktok')->redirect();
+})->name('tiktok-login');
+
+
+Route::get('/tiktok/callback', function () {
+    OAuth::iniciarConTwitter();
+
+    return redirect('/');
+});
+
+
 
 
 

@@ -40,7 +40,7 @@
                     <div class="col-xl-7 col-lg-9 col-md-8">
                         <div class="wantToWork-caption wantToWork-caption2">
                             <h2>¿ Qué encontrarás ?</h2>
-                            <p> Todo lo que necesitas para tu bienestar en un solo lugar,ahorrando tiempo y dinero en
+                            <p style="font-size: 16px"> Todo lo que necesitas para tu bienestar en un solo lugar,ahorrando tiempo y dinero en
                                 búsquedas dispersas: desde expertos y comunidad,<br> hasta recursos, tienda y mucho más.
                             </p>
                         </div>
@@ -62,15 +62,15 @@
                         <div class="cat-icon">
                             <img src="landing/assets/img/icon/services1.svg" alt="">
                         </div>
+
                         <div class="cat-cap">
-                            <h5><a href="services.html">Mercado</a></h5>
-                            <p>Descubre suplementos especializados para el
-                                manejo del
+                            <h5><a href="services.html">Consultas</a></h5>
+                            <p>Conéctate con médicos expertos en medicina
+                                funcional y
                                 síndrome de ovario
-                                poliquístico, diseñados con principios de
-                                medicina funcional
-                                para un bienestar
-                                integral.</p>
+                                poliquístico, obteniendo consejos personalizados
+                                y
+                                suplementos adecuados.</p>
                             <a href="services.html" class="plus-btn"><i class="ti-plus"></i></a>
                         </div>
                     </div>
@@ -97,13 +97,14 @@
                             <img src="landing/assets/img/icon/services3.svg" alt="">
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="services.html">Consultas</a></h5>
-                            <p>Conéctate con médicos expertos en medicina
-                                funcional y
+                            <h5><a href="services.html">Mercado</a></h5>
+                            <p>Descubre suplementos especializados para el
+                                manejo del
                                 síndrome de ovario
-                                poliquístico, obteniendo consejos personalizados
-                                y
-                                suplementos adecuados.</p>
+                                poliquístico, diseñados con principios de
+                                medicina funcional
+                                para un bienestar
+                                integral.</p>
                             <a href="services.html" class="plus-btn"><i class="ti-plus"></i></a>
                         </div>
                     </div>

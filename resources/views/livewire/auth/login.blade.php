@@ -49,10 +49,13 @@
 
 
         <a href="{{route('google-login')}}" class="login100-social-item bg3">
-            <i class="fa fa-google"></i>
+            <i class="fa-brands fa-google"></i>
         </a>
         <a href="{{route('twitter-login')}}" class="login100-social-item bg1">
-            <i class="fa fa-twitter"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="{{route('tiktok-login')}}" class="login100-social-item bg2">
+            <i class="fa-brands fa-tiktok"></i>
         </a>
     </div>
 

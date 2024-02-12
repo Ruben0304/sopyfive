@@ -24,7 +24,7 @@
                                         <li><a href="{{ route('home') }}">Inicio</a></li>
                                         <li><a href="{{ route('about') }}">Conócenos</a></li>
                                         {{-- <li><a href="services.html">Comunidades</a></li> --}}
-                                        <li><a href="#">Tu comunidad</a>
+                                        <li><a href="#">5 pilares</a>
                                             <ul class="submenu">
                                                 <li><a href="{{route('comunidad',['id' =>2])}}">Nutrición</a></li>
                                                 <li><a href="{{route('comunidad',['id' => 3])}}">Actividad Física</a></li>
@@ -36,8 +36,8 @@
 
                                             </ul>
                                         </li>
-                                        <li><a href="#">Shop (pronto)</a></li>
-                                        <li><a href="#">Tus profesionales (pronto)</a></li>
+                                        <li><a href="#">Shop</a></li>
+                                        <li><a href="#">Tus profesionales</a></li>
                                         @auth
                                             <li><a  href="{{ route('logout') }}" id="salirMovil">Salir</a></li>
                                         @else

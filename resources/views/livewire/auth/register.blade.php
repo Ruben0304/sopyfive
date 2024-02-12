@@ -60,6 +60,9 @@
         <a href="{{route('twitter-login')}}" class="login100-social-item bg1">
             <i class="fa fa-twitter"></i>
         </a>
+        <a href="{{route('tiktok-login')}}" class="login100-social-item bg2">
+            <i class="fa fa-music"></i>
+        </a>
     </div>
 
     <div class="flex-col-c p-t-155">
