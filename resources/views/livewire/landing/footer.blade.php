@@ -1,40 +1,41 @@
-<footer >
-    <div class="footer-wrappr section-bg3" data-background="landing/assets/img/gallery/footer-bg.png">
-        <div class="footer-area footer-padding ">
+<footer ">
+    <div class="footer-wrappr section-bg3" data-background="{{asset('landing/assets/img/gallery/footer-bg.png')}}">
+        <div class="footer-area  " style="padding-top: 100px">
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col-xl-8 col-lg-8 col-md-6 col-sm-12">
                         <div class="single-footer-caption mb-50">
                             <!-- logo -->
-                            <div class="footer-logo mb-25" >
-                                <a href="index.html"><img src="landing/assets/img/logo/1.png"
-                                        alt="" style="width: 85%"></a>
+                            <div class="footer-logo mb-25" style="width: 150px">
+                                <a href="index.html" ><img style="width: 100%" src="{{asset('landing/assets/img/logo/1.png')}}"
+                                        alt="logo" ></a>
                             </div>
-                            <div class="header-area">
-                                <div class="main-header main-header2">
-                                    <div class="menu-main d-flex align-items-center justify-content-start">
-                                        <!-- Main-menu -->
-                                        <div class="main-menu main-menu2">
-                                            <nav>
-                                                <ul >
-                                                    <li ><a style="color: white" href="index.html">Inicio</a></li>
-                                                    <li><a style="color: white" href="about.html">Mercado</a></li>
-                                                    {{-- <li><a href="services.html">Comunidades</a></li> --}}
-                                                    <li><a style="color: white" href="blog.html">Comunidades</a>
-                                                        <ul class="submenu">
-                                                            <li><a href="blog.html">Nutrición</a></li>
-                                                            <li><a href="blog_details.html">Cultura Física</a></li>
-                                                            <li><a href="elements.html">Sueño</a></li>
-                                                            <li><a href="elements.html">Salud Mental</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a style="color: white" href="contact.html">Sobre Nosotros</a></li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+{{--                            <div class="header-area">--}}
+{{--                                <div class="main-header main-header2">--}}
+{{--                                    <div class="menu-main d-flex align-items-center justify-content-start">--}}
+{{--                                        <!-- Main-menu -->--}}
+{{--                                        <div class="main-menu main-menu2">--}}
+{{--                                            <nav>--}}
+{{--                                                <ul >--}}
+{{--                                                    <li><a style="color: white" href="{{ route('home') }}">Inicio</a></li>--}}
+{{--                                                    <li><a style="color: white" href="{{ route('about') }}">Conócenos</a></li>--}}
+{{--                                                    --}}{{-- <li><a href="services.html">Comunidades</a></li> --}}
+{{--                                                    <li><a style="color: white" href="#">5 pilares</a>--}}
+{{--                                                        <ul class="submenu">--}}
+{{--                                                            @foreach($comunidades as $c)--}}
+{{--                                                                <li><a style="color: white" href="{{route('comunidad',['id' =>$c->id])}}">{{$c->title}}</a></li>--}}
+{{--                                                            @endforeach--}}
+
+{{--                                                        </ul>--}}
+{{--                                                    </li>--}}
+{{--                                                    <li><a style="color: white" href="#">Shop</a></li>--}}
+{{--                                                    <li><a style="color: white" href="#">Tus profesionales</a></li>--}}
+{{--                                                </ul>--}}
+{{--                                            </nav>--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                             <!-- social -->
                             <div class="footer-social mt-50">
                                 <a href="#" style="background-color: #2C3726"><i style="color: white" class="fab fa-twitter"></i></a>

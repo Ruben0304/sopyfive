@@ -15,4 +15,14 @@ class Comunity extends Model
     {
         return $this->belongsToMany(Encuesta::class, 'comunities_encuesta');
     }
+
+    public function slider()
+    {
+        return $this->hasOne(Slider::class);
+    }
+
+    public function articles()
+    {
+        return $this->hasMany(Articulo::class);
+    }
 }

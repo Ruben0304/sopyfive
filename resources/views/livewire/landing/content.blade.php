@@ -1,7 +1,7 @@
 <main>
     <!--? Slider Area Start-->
     <div class="slider-area">
-        @if($id == null)
+
             <video id="myVideo" autoplay muted loop playsinline
                    style="position: absolute;width: 100%;height: 95%;object-fit: cover ">
             </video>
@@ -26,10 +26,7 @@
 
             <!-- Slider Single -->
             <livewire:landing.slider>
-                @else
-                    <img src="landing/assets/img/slider/{{$id}}.jpg"  style="position: absolute;width: 100%;height: 95%;object-fit: cover " >
-                    <livewire:landing.hero :$id>
-        @endif
+
     </div>
 
 

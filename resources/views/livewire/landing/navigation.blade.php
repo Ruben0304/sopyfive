@@ -7,7 +7,7 @@
                     <!-- Logo -->
                     <div class="col-xl-2 col-lg-2 col-md-1" style="display: flex">
                         <div class="logo">
-                            <a href="index.html"><img src="landing/assets/img/logo/logo.png" alt=""
+                            <a href="index.html"><img src="{{asset('landing/assets/img/logo/logo.png')}}" alt=""
                                     height="90px"></a>
                         </div>
 
@@ -26,13 +26,9 @@
                                         {{-- <li><a href="services.html">Comunidades</a></li> --}}
                                         <li><a href="#">5 pilares</a>
                                             <ul class="submenu">
-                                                <li><a href="{{route('comunidad',['id' =>2])}}">Nutrición</a></li>
-                                                <li><a href="{{route('comunidad',['id' => 3])}}">Actividad Física</a></li>
-                                                <li><a href="{{route('comunidad',['id' => 4])}}">Sueño y Relajación</a></li>
-                                                <li><a href="{{route('comunidad',['id' => 5])}}">Manejo del Estrés</a></li>
-                                                <li><a href="{{route('comunidad',['id' => 6])}}">Proyecto de Vida</a></li>
-
-
+                                                @foreach($comunidades as $c)
+                                                    <li><a href="{{route('comunidad',['id' =>$c->id])}}">{{$c->title}}</a></li>
+                                                @endforeach
 
                                             </ul>
                                         </li>

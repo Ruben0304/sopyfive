@@ -2,6 +2,8 @@
 
 use App\Livewire\Encuesta;
 use App\Livewire\Landing\About;
+use App\Livewire\Landing\Blog;
+use App\Livewire\Landing\BlogDetails;
 use App\Livewire\Landing\Content;
 use App\Livewire\Market\Cart;
 use App\Livewire\Market\MarketHome;
@@ -9,11 +11,7 @@ use App\Livewire\Market\ProductInfo;
 use App\Livewire\Market\Products;
 use App\Livewire\Market\ShippingDetails;
 use App\Livewire\Market\Stripe\StripeWebhookHandler;
-use App\Models\SocialAccount;
-use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,7 +40,8 @@ use Laravel\Socialite\Facades\Socialite;
 Route::get('/encuesta', Encuesta::class)->name('encuesta');
 
 Route::get('/', Content::class)->name('home');
-
+Route::get('/blog/{id}', Blog::class)->name('comunidad');
+Route::get('/blog_details/{id}', BlogDetails::class)->name('blog-details');
 Route::get('/about', About::class)->name('about');
 
 Route::get('market/home', MarketHome::class)->name('mercado');
@@ -52,6 +51,9 @@ Route::get('market/cart', Cart::class)->name('cart');
 Route::get('market/product/{producto}', ProductInfo::class)->name('product-info');
 
 
+Route::get('admin', \App\Livewire\Admin\Dashboard::class)->name('admin');
+Route::get('admin/nuevo-articulo', \App\Livewire\Admin\AddArticle::class)->name('add-article');
+
 
 Route::view('/offline', 'vendor/laravelpwa/offline')->name('offline');
 Route::post('stripe/webhook', StripeWebhookHandler::class)->name('stripe-order-succes');
@@ -59,8 +61,7 @@ Route::post('stripe/webhook', StripeWebhookHandler::class)->name('stripe-order-s
 
 require __DIR__ . '/auth.php';
 
-//parametros
-Route::get('/{id}', Content::class)->name('comunidad');
+
 
 
 

@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Landing;
 
+use App\Models\Comunity;
 use Livewire\Component;
 use \App\Models\Slider;
 
@@ -13,7 +14,7 @@ class Hero extends Component
 
     public function mount(int $id)
     {
-        $slider = Slider::find($id);
+        $slider = Comunity::find($id)->slider;
         $this->title = $slider->title;
         $this->paragraph = $slider->paragraph;
 

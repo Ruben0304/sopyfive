@@ -5,16 +5,16 @@ namespace App\Livewire\Landing;
 use App\Models\Comunity;
 use Livewire\Component;
 
-class Navigation extends Component
+class BlogCategoriesCount extends Component
 {
-    public $comunidades;
+    public $comunities;
 
     public function mount()
     {
-        $this->comunidades = Comunity::all();
+        $this->comunities=Comunity::all();
     }
     public function render()
     {
-        return view('livewire.landing.navigation');
+        return view('livewire.landing.blog-categories-count');
     }
 }

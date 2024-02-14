@@ -21,7 +21,7 @@
                                     {{$slider->paragraph}}<br>
                                 </p>
                                 @if($slider->id != 1)
-                                <a href="{{route('comunidad',['id' => $slider->id])}}" class="btn" data-animation="fadeInLeft"
+                                <a href="{{route('comunidad',['id' => $slider->comunity->id])}}" class="btn" data-animation="fadeInLeft"
                                     data-delay=".3s" style="background-color: #7D525E" >Ir a ver</a>
                                 @else
                                     <a href="{{route('encuesta')}}" class="btn" data-animation="fadeInLeft"
