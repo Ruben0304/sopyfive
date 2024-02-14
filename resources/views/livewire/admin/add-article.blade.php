@@ -16,10 +16,7 @@
 
                             <div class="p-4 code-to-copy">
                                 <form wire:submit="create">
-                                    @foreach ($errors->all() as $error)
-                                        <span class="text-danger">{{ $error }}</span>
-                                        <br><!-- Mostrar el mensaje de error -->
-                                    @endforeach
+
 
                                     <div class="mb-3">
                                         <label class="form-label" for="basic-form-name">Título</label>
@@ -31,6 +28,7 @@
                                         <label class="form-label" for="basic-form-gender">Comunidad</label>
                                         <select class="form-select" id="basic-form-gender"
                                                 aria-label="Default select example" wire:model="form.comunity">
+                                            <option selected value="">-- Selecciona una comunidad --</option>
                                             @foreach($comunities as $c)
                                                 <option value="{{$c->id}}">{{$c->title}}</option>
                                             @endforeach
@@ -46,7 +44,10 @@
                                         <textarea class="form-control" id="basic-form-textarea" rows="20"
                                                   placeholder="Descripcion" wire:model="form.content"></textarea>
                                     </div>
-
+                                    @foreach ($errors->all() as $error)
+                                        <span class="text-danger">{{ $error }}</span>
+                                        <br><!-- Mostrar el mensaje de error -->
+                                    @endforeach
                                     <button class="btn btn-primary" type="submit">Crear</button>
                                 </form>
 
