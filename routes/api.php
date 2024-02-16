@@ -14,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+Route::apiResource('/api/v1/comunity/', \App\Http\Controllers\API\V1\ComunityController::class);
+
+
+
 // Ruta para registrar un nuevo usuario
 Route::post('register', [\App\Http\Controllers\API\AuthController::class, 'register']);
 

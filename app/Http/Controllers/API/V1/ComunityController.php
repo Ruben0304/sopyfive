@@ -29,7 +29,7 @@ class ComunityController extends Controller
      */
     public function show(Comunity $comunity)
     {
-        //
+        return $comunity;
     }
 
     /**
