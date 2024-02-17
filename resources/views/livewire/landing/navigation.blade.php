@@ -92,7 +92,6 @@
         </div>
     </div>
 
-    <livewire:auth.google-one-tap/>
 
     <!-- Header End -->
 </header>
