@@ -31,7 +31,7 @@ Route::get('/google/callback', function () {
 });
 
 //google onetap
-Route::post('/google/onetap', 'Auth\LoginController@handleGoogleOneTap')->name('login.google.onetap');
+Route::post('/google/onetap', 'OAuth@handleGoogleOneTap')->name('login.google.onetap');
 
 
 //twitter login
