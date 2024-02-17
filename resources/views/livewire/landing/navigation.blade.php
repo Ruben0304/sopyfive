@@ -91,7 +91,8 @@
             </div>
         </div>
     </div>
-{{--    <livewire:auth.google-one-tap/>--}}
+
+    <livewire:auth.google-one-tap/>
 
     <!-- Header End -->
 </header>

@@ -13,6 +13,7 @@
     @livewireStyles
     @livewireScripts
     <!-- CSS here -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <link rel="stylesheet" href="{{asset('landing/assets/css/bootstrap.min.css')}} ">
     <link rel="stylesheet" href="{{asset('landing/assets/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('landing/assets/css/slicknav.css')}}">

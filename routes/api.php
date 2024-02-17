@@ -3,6 +3,7 @@
 use App\Livewire\Market\Stripe\StripeWebhookHandler;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\V1\ComunityController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-Route::apiResource('/api/v1/comunity/', \App\Http\Controllers\API\V1\ComunityController::class);
+
+Route::prefix('v1')->group(function() {
+    Route::apiResource('comunity', ComunityController::class)->middleware('auth:sanctum');
+});
+
 
 
 

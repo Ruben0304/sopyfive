@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 
@@ -39,29 +40,29 @@ class AuthController extends Controller
     {
         // Validar los datos del request
         $request->validate([
+            'from' => 'required|string|max:100',
             'email' => 'required|string|email',
             'password' => 'required|string',
         ]);
 
-        // Buscar el usuario por el email
-        $user = User::where('email', $request->email)->first();
+        if (Auth::attempt($request->only('email','password'))){
 
-        // Verificar que el usuario exista y que la contraseña coincida
-        if (!$user || !Hash::check($request->password, $user->password)) {
-            // Lanzar una excepción de validación
-            throw ValidationException::withMessages([
-                'email' => ['Las credenciales son incorrectas.'],
-            ]);
+            return response()->json([
+                'token' => $request->user()->createToken($request->from)->plainTextToken,
+                'message' => 'Success',
+            ],201);
+
         }
 
-        // Revocar los tokens anteriores del usuario
-        $user->tokens()->delete();
 
-        // Devolver el usuario y un nuevo token de API
-        return response()->json([
-            'user' => $user,
-            'token' => $user->createToken('api')->plainTextToken,
-        ]);
+            return response()->json([
+                'message' => 'Credenciales incorrectas',
+                ],401);
+
+
+
+
+
     }
 
     // Método para cerrar sesión de un usuario

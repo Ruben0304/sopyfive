@@ -38,7 +38,7 @@
                         <div class="wantToWork-caption wantToWork-caption2">
                             <h2>¿ Qué encontrarás ?</h2>
                             <p style="font-size: 16px"> Todo lo que necesitas para tu bienestar en un solo lugar,ahorrando tiempo y dinero en
-                                búsquedas dispersas: desde expertos y comunidad,<br> hasta recursos, tienda y mucho más.
+                                búsquedas dispersas: desde expertos y comunidad, hasta recursos, tienda y mucho más.
                             </p>
                         </div>
                     </div>

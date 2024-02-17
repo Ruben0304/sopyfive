@@ -4,6 +4,7 @@ namespace App\Livewire\Actions;
 
 use App\Models\SocialAccount;
 use App\Models\User;
+
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
 
@@ -51,6 +52,8 @@ class OAuth
 
         }
     }
+
+
 
     public static function iniciarConTwitter ():void {
         $twitterUser = Socialite::driver('twitter')->user();

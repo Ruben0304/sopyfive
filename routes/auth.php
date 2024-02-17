@@ -6,6 +6,7 @@ use App\Livewire\Auth\Login;
 use App\Livewire\Auth\Register;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Http\Request;
 
 
 Route::middleware('guest')->group(function () {
@@ -28,6 +29,9 @@ Route::get('/google/callback', function () {
 
     return redirect('/');
 });
+
+//google onetap
+Route::post('/google/onetap', 'Auth\LoginController@handleGoogleOneTap')->name('login.google.onetap');
 
 
 //twitter login
