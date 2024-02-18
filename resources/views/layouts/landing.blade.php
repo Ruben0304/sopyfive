@@ -34,7 +34,7 @@
             display: none;
         }
     </style>
-
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 
 <body>
@@ -71,7 +71,7 @@
             </div>
 
             <!-- JS here -->
-{{--            <script src="https://accounts.google.com/gsi/client" async defer></script>--}}
+
             <script src="{{asset('./landing/assets/js/vendor/modernizr-3.5.0.min.js')}}"></script>
             <!-- Jquery, Polanding/pper, Bootstrap -->
             <script src="{{asset('./landing/assets/js/vendor/jquery-1.12.4.min.js')}}"></script>
