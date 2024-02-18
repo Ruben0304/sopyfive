@@ -1,9 +1,10 @@
 <?php
 
-use App\Livewire\Market\Stripe\StripeWebhookHandler;
+use App\Http\Controllers\API\AuthController;
+use App\Http\Controllers\API\V1\ArticuloController;
+use App\Http\Controllers\API\V1\ComunityController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\API\V1\ComunityController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,18 +17,20 @@ use App\Http\Controllers\API\V1\ComunityController;
 |
 */
 
-Route::prefix('v1')->group(function() {
+Route::prefix('v1')->group(function () {
     Route::apiResource('comunity', ComunityController::class)->middleware('auth:sanctum');
+    Route::apiResource('article', ArticuloController::class)->middleware('auth:sanctum');
+    Route::post('article/photo', [ArticuloController::class, 'storeIMG'])->middleware('auth:sanctum');
+    //Route::post('article', [ArticuloController::class, 'store'])->middleware('auth:sanctum');
+
 });
 
 
-
-
 // Ruta para registrar un nuevo usuario
-Route::post('register', [\App\Http\Controllers\API\AuthController::class, 'register']);
+Route::post('register', [AuthController::class, 'register']);
 
 // Ruta para iniciar sesión de un usuario
-Route::post('login', [\App\Http\Controllers\API\AuthController::class, 'login']);
+Route::post('login', [AuthController::class, 'login']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
