@@ -31,7 +31,7 @@ Route::get('/google/callback', function () {
 });
 
 //google onetap
-Route::post('/google/onetap', 'OAuth@handleGoogleOneTap')->name('login.google.onetap');
+Route::post('/google/onetap', [\App\Http\Controllers\OAuth::class, 'handleGoogleOneTap'])->name('login.google.onetap');
 
 
 //twitter login
@@ -53,7 +53,7 @@ Route::get('/tiktok/redirect', function () {
 
 
 Route::get('/tiktok/callback', function () {
-    OAuth::iniciarConTwitter();
+    OAuth::iniciarConTikTok();
 
     return redirect('/');
 });
