@@ -1,12 +1,11 @@
 <?php
 
-use App\Livewire\Actions\OAuth;
 use App\Livewire\Actions\Logout;
+use App\Livewire\Actions\OAuth;
 use App\Livewire\Auth\Login;
 use App\Livewire\Auth\Register;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
-use Illuminate\Http\Request;
 
 
 Route::middleware('guest')->group(function () {
@@ -41,7 +40,7 @@ Route::get('/twitter/redirect', function () {
 
 
 Route::get('/twitter/callback', function () {
-   OAuth::iniciarConTwitter();
+    OAuth::iniciarConTwitter();
 
     return redirect('/');
 });
@@ -57,11 +56,6 @@ Route::get('/tiktok/callback', function () {
 
     return redirect('/');
 });
-
-
-
-
-
 
 
 Route::middleware('auth')->group(function () {
