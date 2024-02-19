@@ -1,10 +1,13 @@
 <?php
 
+use App\Livewire\Admin\AddArticle;
+use App\Livewire\Admin\Dashboard;
 use App\Livewire\Encuesta;
 use App\Livewire\Landing\About;
 use App\Livewire\Landing\Blog;
 use App\Livewire\Landing\BlogDetails;
 use App\Livewire\Landing\Content;
+use App\Livewire\Landing\TermsConditions;
 use App\Livewire\Market\Cart;
 use App\Livewire\Market\MarketHome;
 use App\Livewire\Market\ProductInfo;
@@ -43,6 +46,7 @@ Route::get('/', Content::class)->name('home');
 Route::get('/blog/{id}', Blog::class)->name('comunidad');
 Route::get('/blog_details/{id}', BlogDetails::class)->name('blog-details');
 Route::get('/about', About::class)->name('about');
+Route::get('/terms_conditions', TermsConditions::class)->name('terms-conditions');
 
 Route::get('market/home', MarketHome::class)->name('mercado');
 Route::get('market/products', Products::class)->name('productos');
@@ -51,8 +55,8 @@ Route::get('market/cart', Cart::class)->name('cart');
 Route::get('market/product/{producto}', ProductInfo::class)->name('product-info');
 
 
-Route::get('admin', \App\Livewire\Admin\Dashboard::class)->name('admin');
-Route::get('admin/nuevo-articulo', \App\Livewire\Admin\AddArticle::class)->name('add-article');
+Route::get('admin', Dashboard::class)->name('admin');
+Route::get('admin/nuevo-articulo', AddArticle::class)->name('add-article');
 
 
 Route::view('/offline', 'vendor/laravelpwa/offline')->name('offline');
