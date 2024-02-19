@@ -24,6 +24,7 @@ class EventServiceProvider extends ServiceProvider
 
             TwitterExtendSocialite::class . '@handle',
             TikTokExtendSocialite::class . '@handle',
+
         ]
     ];
 

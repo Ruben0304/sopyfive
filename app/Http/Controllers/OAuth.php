@@ -43,8 +43,9 @@ class OAuth extends Controller
 
                 // Iniciar sesión con el usuario
                 Auth::login($user);
+                redirect(route('home'));
             } else {
-                back()->with('error', 'Email ya existe');
+                redirect(route('home'))->with('error', 'Email ya existe');
             }
         }
     }
