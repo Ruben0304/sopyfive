@@ -1,6 +1,6 @@
-<footer>
+<footer style="background-color: #7D525E">
     <!-- Footer Start-->
-    <div class="footer-area footer-padding">
+    <div class="footer-area footer-padding" style="background-color: #7D525E">
         <div class="container-fluid ">
             <div class="row d-flex justify-content-between">
                 <div class="col-xl-3 col-lg-3 col-md-8 col-sm-8">
@@ -76,7 +76,7 @@
         </div>
     </div>
     <!-- footer-bottom area -->
-    <div class="footer-bottom-area">
+    <div class="footer-bottom-area" style="background-color: #7D525E>
         <div class="container">
             <div class="footer-border">
                 <div class="row d-flex align-items-center">
