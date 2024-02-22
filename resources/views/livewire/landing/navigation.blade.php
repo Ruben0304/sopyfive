@@ -21,13 +21,13 @@
                                 <nav>
 
                                     <ul id="navigation">
-                                        <li><a href="{{ route('home') }}">Inicio</a></li>
-                                        <li><a href="{{ route('about') }}">Conócenos</a></li>
+                                        <li><a href="{{ route('home') }}" >Inicio</a></li>
+                                        <li><a href="{{ route('about') }}" >Conócenos</a></li>
                                         {{-- <li><a href="services.html">Comunidades</a></li> --}}
                                         <li><a href="#">5 pilares</a>
                                             <ul class="submenu">
                                                 @foreach($comunidades as $c)
-                                                    <li><a href="{{route('comunidad',['id' =>$c->id])}}">{{$c->title}}</a></li>
+                                                    <li><a href="{{route('comunidad',['id' =>$c->id])}}" >{{$c->title}}</a></li>
                                                 @endforeach
 
                                             </ul>

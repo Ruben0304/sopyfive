@@ -1,60 +1,73 @@
-<section class="py-0" wire:refresh>
-    <div class="container-small">
-        <div class="ecommerce-topbar">
-            <nav class="navbar navbar-expand-lg navbar-light px-0">
-                <div class="row gx-0 gy-2 w-100 flex-between-center">
-                    <div class="col-auto"><a class="text-decoration-none" href="../../../index-2.html">
-                            <div class="d-flex align-items-center"><img src="../../../assets/img/icons/logo.png"
-                                                                        alt="phoenix" width="27"/>
-                                <p class="logo-text ms-2">SOP&Five</p>
-                            </div>
-                        </a></div>
-                    <div class="col-auto order-md-1">
-                        <ul class="navbar-nav navbar-nav-icons flex-row me-n2">
-                            <li class="nav-item d-flex align-items-center">
-                                 <div class="theme-control-toggle fa-icon-wait px-2"><input
-                                        class="form-check-input ms-0 theme-control-toggle-input" type="checkbox"
-                                        data-theme-control="phoenixTheme" value="dark"
-                                        id="themeControlToggle" /><label
-                                        class="mb-0 theme-control-toggle-label theme-control-toggle-light"
-                                        for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left"
-                                        title="Switch theme"><span class="icon"
-                                            data-feather="moon"></span></label><label
-                                        class="mb-0 theme-control-toggle-label theme-control-toggle-dark"
-                                        for="themeControlToggle" data-bs-toggle="tooltip" data-bs-placement="left"
-                                        title="Switch theme"><span class="icon" data-feather="sun"></span></label>
-                                </div>
-                            </li>
-                            {{--ITEM CART--}}
-                            <li class="nav-item"><a class="nav-link px-2 icon-indicator icon-indicator-primary"
-                                                    href="{{ route('cart') }}" wire:navigate role="button"><span
-                                        class="text-700"
-                                        data-feather="shopping-cart"
-                                        style="height:20px;width:20px;"></span>
-                                    <livewire:market.component.nav-cart>
-                                </a></li>
+<header>
+    <!-- Header Start -->
+    <div class="header-area ">
+        <div class="main-header header-sticky">
+            <div class="container-fluid">
+                <div class="menu-wrapper d-flex align-items-center justify-content-between">
+                    <div class="header-left d-flex align-items-center">
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a href="index.html"><img src="{{asset('landing/assets/img/logo/logo.png')}}" alt="" height="90px"></a>
+                        </div>
+                        <!-- Main-menu -->
+                        <div class="main-menu  d-none d-lg-block">
+                            <nav>
+                                <ul id="navigation">
+                                    <li><a href="index.html">Inicio</a></li>
+                                    <li><a href="blog.html">5 pilares</a>
+                                        <ul class="submenu">
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="blog_details.html">Blog Details</a></li>
+                                            <li><a href="elements.html">Elements</a></li>
+                                            <li><a href="product_details.html">Product Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="blog.html">Categorías</a>
+                                        <ul class="submenu">
+                                            <li><a href="blog.html">Blog</a></li>
+                                            <li><a href="blog_details.html">Blog Details</a></li>
+                                            <li><a href="elements.html">Elements</a></li>
+                                            <li><a href="product_details.html">Product Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="blog.html">Explorar</a></li>
 
 
-                            {{-- ITEM ORDENES --}}
-                            <livewire:market.component.nav-orders>
-
-                                {{-- ITEM USUARIO --}}
-                                <livewire:market.component.nav-user>
-
-
-                        </ul>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="search-box ecommerce-search-box w-100">
-                            <form class="position-relative" data-bs-toggle="search" data-bs-display="static"><input
-                                    class="form-control search-input search form-control-sm" type="search"
-                                    placeholder="Search" aria-label="Search"/>
-                                <span class="fas fa-search search-box-icon"></span>
-                            </form>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
+                    <div class="header-right1 d-flex align-items-center">
+                        <!-- Social -->
+                        <div class="header-social d-none d-md-block">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                        <!-- Search Box -->
+                        <div class="search d-none d-md-block">
+                            <ul class="d-flex align-items-center">
+                                <li class="mr-15">
+                                    <div class="nav-search search-switch">
+                                        <i class="ti-search"></i>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="card-stor">
+                                        <img src="assets/img/gallery/card.svg" alt="">
+                                        <span>0</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="col-12">
+                        <div class="mobile_menu d-block d-lg-none"></div>
+                    </div>
                 </div>
-            </nav>
+            </div>
         </div>
-    </div><!-- end of .container-->
-</section>
+    </div>
+    <!-- Header End -->
+</header>
