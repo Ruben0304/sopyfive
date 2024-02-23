@@ -10,11 +10,21 @@
                             <a href="index.html"><img src="{{asset('landing/assets/img/logo/logo.png')}}" alt="" height="90px"></a>
                         </div>
                         <!-- Main-menu -->
+
+                    </div>
+                    <div class="header-left d-flex align-items-center">
                         <div class="main-menu  d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a href="index.html">Inicio</a></li>
-                                    <li><a href="blog.html">5 pilares</a>
+                                    <li><a href="{{route('home')}}" style="color: #112957">Inicio</a></li>
+                                    <li><a href="#"  style="color: #112957">5 pilares</a>
+                                        <ul class="submenu">
+                                            @foreach($comunities as $c)
+                                            <li><a href="#" >{{$c->title}}</a></li>
+                                            @endforeach
+                                        </ul>
+                                    </li>
+                                    <li><a href="blog.html" style="color: #112957">Categorías</a>
                                         <ul class="submenu">
                                             <li><a href="blog.html">Blog</a></li>
                                             <li><a href="blog_details.html">Blog Details</a></li>
@@ -22,15 +32,7 @@
                                             <li><a href="product_details.html">Product Details</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="blog.html">Categorías</a>
-                                        <ul class="submenu">
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog_details.html">Blog Details</a></li>
-                                            <li><a href="elements.html">Elements</a></li>
-                                            <li><a href="product_details.html">Product Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="blog.html">Explorar</a></li>
+                                    <li><a href="{{route('productos')}}" style="color: #112957">Explorar</a></li>
 
 
                                 </ul>
@@ -53,10 +55,12 @@
                                     </div>
                                 </li>
                                 <li>
+                                    <a href="{{route('cart')}}">
                                     <div class="card-stor">
                                         <img src="assets/img/gallery/card.svg" alt="">
-                                        <span>0</span>
+                                        <livewire:market.component.nav-cart>
                                     </div>
+                                    </a>
                                 </li>
                             </ul>
                         </div>

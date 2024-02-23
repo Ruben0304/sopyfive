@@ -42,7 +42,7 @@
             <div class="d-flex justify-content-between border-y border-dashed py-3 mb-4">
                 <h4 class="mb-0">Total :</h4>
                 <h4 class="mb-">${{ $total }}</h4>
-            </div><button class="btn btn-primary w-100" wire:click='pay'>Ir a pagar ${{ $total }}<span
+            </div><button class="btn btn-primary w-100" wire:click='pay' style="background-color: #2C3726">Ir a pagar ${{ $total }}<span
                     class="fas fa-chevron-right ms-1 fs--2"></span></button>
         </div>
     </div>

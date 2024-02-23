@@ -32,7 +32,7 @@
 
                                             </ul>
                                         </li>
-                                        <li><a href="#">Shop</a></li>
+                                        <li><a href="{{ route('market') }}">Shop</a></li>
                                         <li><a href="#">Tus profesionales</a></li>
                                         @auth
                                             <li><a  href="{{ route('logout') }}" id="salirMovil">Salir</a></li>
