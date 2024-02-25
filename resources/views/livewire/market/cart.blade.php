@@ -15,7 +15,7 @@
         </div>
     </div>
     <!-- listing Area Start -->
-    <div class="container" >
+    <div class="container" style="margin-bottom: 80px">
         <h2 class="mb-6">Cart</h2>
         <div class="row g-5">
             <div class="col-12 col-lg-8">

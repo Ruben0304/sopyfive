@@ -57,7 +57,7 @@
                                 <li>
                                     <a href="{{route('cart')}}">
                                     <div class="card-stor">
-                                        <img src="assets/img/gallery/card.svg" alt="">
+                                        <img src="{{asset('market/assets/img/gallery/card.svg')}}" alt="">
                                         <livewire:market.component.nav-cart>
                                     </div>
                                     </a>

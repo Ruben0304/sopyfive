@@ -14,7 +14,7 @@
 
 
             </select>
-            <div>
+            <div style="padding: 10px">
                 <div class="d-flex justify-content-between">
                     <p class="text-900 fw-semi-bold">Items subtotal :</p>
                     <p class="text-1100 fw-semi-bold">${{ $subtotal }}</p>

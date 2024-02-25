@@ -5,14 +5,17 @@ namespace App\Livewire\Market\Component;
 use App\Models\Product;
 use Darryldecode\Cart\Facades\CartFacade;
 use Livewire\Component;
+use Livewire\Attributes\Validate;
 
 class CartItem extends Component
 {
 
-    public $item;
-    public $quantity;
-    public $price;
 
+
+    #[Validate('required|numeric|min:1')]
+    public $quantity;
+    public $item;
+    public $price;
 
     public function mount($item)
     {
@@ -22,6 +25,22 @@ class CartItem extends Component
     }
 
     //incrementar y decrementar carrito
+    public function updatedQuantity($value)
+    {
+
+        if ($value > 1) {
+
+            $sessionId = session()->getId();
+            CartFacade::session($sessionId)->update($this->item->id, array(
+                'quantity' => array(
+                    'relative' => false,
+                    'value' => $value
+                ),
+            ));
+        }
+        $this->dispatch('cartModified');
+    }
+
 
     public function decrement()
     {
