@@ -40,7 +40,7 @@
     <!-- ===============================================-->
     <!--    Main Content-->
     <!-- ===============================================-->
-    <div id="preloader-active">
+    <div id="preloader-active" >
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
@@ -62,6 +62,11 @@
 
 
         <livewire:landing.footer>
+            <livewire:market.component.search>
+
+            <div id="back-top" style="background-color: #606060; z-index: 99999">
+                <a title="Go to Top" href="{{route('encuesta')}}" > <i ><img src="{{asset('landing/assets/img/icon/gift.png')}}" alt="" width="65%"></i></a>
+            </div>
     <!-- ===============================================-->
     <!--    JavaScripts-->
     <!-- ===============================================-->

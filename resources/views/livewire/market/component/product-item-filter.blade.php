@@ -9,7 +9,7 @@
         <!-- Button -->
         <div class="row justify-content-center">
             <div class="room-btn mt-20">
-                {{ $productos->links() }}
+{{--                {{ $productos->links() }}--}}
             </div>
         </div>
     </div>

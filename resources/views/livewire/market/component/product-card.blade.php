@@ -1,7 +1,7 @@
 <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
     <div class="single-new-arrival mb-50 text-center">
         <div class="popular-img">
-            <img src="assets/img/gallery/arrival2.png" alt="">
+            <img src="https://cdn-ldncj.nitrocdn.com/EldVvJZFVQuulLQbdMygrSKfqkefLYNg/assets/images/optimized/rev-9cd203e/www.vitafemme.es/wp-content/uploads/2023/01/71oFTFGXS1L._AC_SL1500_.jpg" alt="">
             <div class="favorit-items">
                 <!-- <span class="flaticon-heart"></span> -->
             <img src="assets/img/gallery/favorit-card.png" alt="" wire:click='addToCart'>

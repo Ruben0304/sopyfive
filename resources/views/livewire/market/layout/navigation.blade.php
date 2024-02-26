@@ -16,7 +16,7 @@
                         <div class="main-menu  d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a href="{{route('home')}}" style="color: #112957">Inicio</a></li>
+                                    <li><a href="{{route('market')}}"style="color: #112957">Mercado</a></li>
                                     <li><a href="#"  style="color: #112957">5 pilares</a>
                                         <ul class="submenu">
                                             @foreach($comunities as $c)
@@ -24,15 +24,16 @@
                                             @endforeach
                                         </ul>
                                     </li>
-                                    <li><a href="blog.html" style="color: #112957">Categorías</a>
+                                    <li><a href="blog.html" style="color: #112957">Categorias</a>
                                         <ul class="submenu">
-                                            <li><a href="blog.html">Blog</a></li>
-                                            <li><a href="blog_details.html">Blog Details</a></li>
-                                            <li><a href="elements.html">Elements</a></li>
-                                            <li><a href="product_details.html">Product Details</a></li>
+                                            <li><a href="#">x</a></li>
+                                            <li><a href="#">x</a></li>
+                                            <li><a href="#">x</a></li>
+                                            <li><a href="#">x</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="{{route('productos')}}" style="color: #112957">Explorar</a></li>
+                                    <li><a href="{{route('home')}}"  style="color: #112957">Volver a inicio</a></li>
 
 
                                 </ul>
@@ -42,7 +43,7 @@
                     <div class="header-right1 d-flex align-items-center">
                         <!-- Social -->
                         <div class="header-social d-none d-md-block">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
                             <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
                             <a href="#"><i class="fab fa-pinterest-p"></i></a>
                         </div>

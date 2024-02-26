@@ -48,6 +48,7 @@ Route::get('/blog_details/{id}', BlogDetails::class)->name('blog-details');
 Route::get('/about', About::class)->name('about');
 Route::get('/terms_conditions', TermsConditions::class)->name('terms-conditions');
 
+
 Route::get('market/home', MarketHome::class)->name('market');
 Route::get('market/products', Products::class)->name('productos');
 Route::get('market/shipping-details', ShippingDetails::class)->name('shipping-details');

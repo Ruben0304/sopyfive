@@ -90,9 +90,7 @@
                             <div class="footer-copy-right">
                                 <p style="color: white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                     Copyright &copy;
-                                    <script>
-                                        document.write(new Date().getFullYear());
-                                    </script> All rights reserved
+                                   All rights reserved
                                      | Sitio hecho con <i
                                         class="fa fa-heart" aria-hidden="true" style="color: white"></i> para Mujeres con SOP
                                     </a>

@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="{{asset('landing/assets/css/style.css')}}">
     @laravelPWA
     @stack('styles')
+    @stack('scripts')
     <style media="screen and (min-width: 600px)">
         #entrarMovil {
             display: none;

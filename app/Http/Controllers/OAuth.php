@@ -24,6 +24,7 @@ class OAuth extends Controller
             // Obtener el usuario asociado al registro
             $user = $socialAccount->user;
             Auth::login($user);
+            redirect(route('home'));
         } else {
             if (!User::where(['email' => $googleUser->getEmail()])->exists()) {
                 // Crear un usuario en la base de datos

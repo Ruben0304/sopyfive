@@ -17,6 +17,12 @@ class NavCart extends Component
          $this->cartSize = CartFacade::session($sessionId)->getContent()->count();
      }
 
+    #[On('cartDeleted')]
+    public function deleteItem()
+    {
+        $this->updateCartItemsCount();
+    }
+
     public function mount()
     {
         $sessionId = session()->getId();

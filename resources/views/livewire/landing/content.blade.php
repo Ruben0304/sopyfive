@@ -1,33 +1,36 @@
 <main>
     <!--? Slider Area Start-->
     <div class="slider-area">
+        <div id="loading-spinner" style="display: none;">
+            Cargando...
+        </div>
 
-            <video id="myVideo" autoplay muted loop playsinline
-                   style="position: absolute;width: 100%;height: 95%;object-fit: cover ">
-            </video>
+        <video id="myVideo" autoplay muted loop playsinline style="position: absolute; width: 100%; height: 95%; object-fit: cover;"></video>
 
-            <script>
-                var video = document.getElementById('myVideo');
+        <script>
+            var video = document.getElementById('myVideo');
+            var spinner = document.getElementById('loading-spinner');
 
-                function setVideoSource() {
-                    if (window.innerWidth <= 600) {
-                        video.src = "landing/assets/video/m.mp4";
-                    } else {
-                        video.src = "landing/assets/video/720.mp4";
-                    }
+            function setVideoSource() {
+                if (window.innerWidth <= 600) {
+                    video.src = "landing/assets/video/m.mp4";
+                } else {
+                    video.src = "landing/assets/video/720.mp4";
                 }
+            }
 
-                window.onresize = setVideoSource;
-                setVideoSource();
+            video.onloadeddata = function() {
+                spinner.style.display = 'none'; // Oculta el spinner cuando el video se haya cargado
+            };
 
+            window.onresize = setVideoSource;
+            setVideoSource();
+        </script>
 
-            </script>
-
-
-            <!-- Slider Single -->
-            <livewire:landing.slider>
-
+        <!-- Slider Single -->
+        <livewire:landing.slider>
     </div>
+
 
 
     <section class="wantToWork-area section-bg3">

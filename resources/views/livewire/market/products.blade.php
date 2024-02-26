@@ -22,8 +22,8 @@
             <div class="row">
                 <div class="col-xl-7 col-lg-8 col-md-10">
                     <div class="section-tittle mb-50">
-                        <h2>Shop with us</h2>
-                        <p>Browse from 230 latest items</p>
+                        <h2>Compra con nosotros</h2>
+                        <p>Productos de excelente calidad</p>
                     </div>
                 </div>
             </div>
