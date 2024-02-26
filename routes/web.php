@@ -54,6 +54,7 @@ Route::get('market/products', Products::class)->name('productos');
 Route::get('market/shipping-details', ShippingDetails::class)->name('shipping-details');
 Route::get('market/cart', Cart::class)->name('cart');
 Route::get('market/product/{producto}', ProductInfo::class)->name('product-info');
+Route::get('market/search/{search}', Products::class)->name('search');
 
 
 Route::get('admin', Dashboard::class)->name('admin');

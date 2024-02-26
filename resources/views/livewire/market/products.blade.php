@@ -31,7 +31,7 @@
                 <!--? Left content -->
                 @livewire('market.component.filter')
                 <!--?  Right content -->
-                @livewire('market.component.product-item-filter')
+                @livewire('market.component.product-item-filter', ['search' => $search])
             </div>
         </div>
     </div>

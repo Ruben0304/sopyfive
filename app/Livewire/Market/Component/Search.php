@@ -10,7 +10,7 @@ class Search extends Component
 
     public function search()
     {
-
+     $this->redirect(route('search',['search' => $this->text]));
     }
     public function render()
     {
