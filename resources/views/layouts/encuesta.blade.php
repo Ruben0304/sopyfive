@@ -49,11 +49,17 @@
     <!-- ===============================================-->
     <!--    Stylesheets-->
     <!-- ===============================================-->
-    
 
- 
+
+
     @stack('styles')
-    @laravelPWA
+    @stack('scripts')
+    <style media="screen and (min-width: 600px)">
+        #entrarMovil {
+            display: none;
+        }
+    </style>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 
 <body>

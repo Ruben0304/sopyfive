@@ -60,52 +60,53 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-cat text-center mb-50">
                         <div class="cat-icon">
-                            <img src="landing/assets/img/icon/services1.svg" alt="">
+                            <img src="landing/assets/img/icon/Doctor.png" alt="">
                         </div>
 
-                        <div class="cat-cap">
-                            <h5><a href="services.html">Consultas</a></h5>
-                            <p>Conéctate con médicos expertos en medicina
+                        <div class="cat-cap" >
+                            <h5><a href="#">Consultas</a></h5>
+                            <p style="text-align: initial;">Conéctate con médicos expertos en medicina
                                 funcional y
                                 síndrome de ovario
                                 poliquístico, obteniendo consejos personalizados
                                 y
                                 suplementos adecuados.</p>
-                            <a href="services.html" class="plus-btn"><i class="ti-plus"></i></a>
+                            <a href="#" class="plus-btn"><i class="ti-arrow-up"></i></a>
                         </div>
+
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-cat text-center mb-50">
                         <div class="cat-icon">
-                            <img src="landing/assets/img/icon/services2.svg" alt="">
+                            <img src="landing/assets/img/icon/Group.png" alt="">
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="services.html">Comunidad</a></h5>
-                            <p>Explora un espacio único para nutrición, cultura
+                            <h5><a href="https://www.instagram.com/dra_yelisancho/">Comunidad</a></h5>
+                            <p style="text-align: initial;">Explora un espacio único para nutrición, cultura
                                 física,
                                 sueño y salud mental, con
                                 comunidades activas, chat en vivo y diálogo
                                 interactivo.</p>
-                            <a href="services.html" class="plus-btn"><i class="ti-plus"></i></a>
+                            <a href="https://www.instagram.com/dra_yelisancho/" class="plus-btn"><i class="ti-arrow-up"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="single-cat text-center mb-50">
                         <div class="cat-icon">
-                            <img src="landing/assets/img/icon/services3.svg" alt="">
+                            <img src="landing/assets/img/icon/Shop.png" alt="">
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="services.html">Mercado</a></h5>
-                            <p>Descubre suplementos especializados para el
+                            <h5><a href="{{route('market')}}">Mercado</a></h5>
+                            <p style="text-align: initial;">Descubre suplementos especializados para el
                                 manejo del
                                 síndrome de ovario
                                 poliquístico, diseñados con principios de
                                 medicina funcional
                                 para un bienestar
                                 integral.</p>
-                            <a href="services.html" class="plus-btn"><i class="ti-plus"></i></a>
+                            <a href="{{route('market')}}" class="plus-btn"><i class="ti-arrow-up"></i></a>
                         </div>
                     </div>
                 </div>
@@ -124,53 +125,42 @@
                             <!-- Single Testimonial -->
                             <div class="single-testimonial position-relative">
                                 <div class="testimonial-caption">
-                                    <img src="assets/img/icon/quotes-sign.png" alt="" class="quotes-sign">
-                                    <p>"La salud mental no se caracteriza
-                                        únicamente por la
-                                        ausencia de trastornos
-                                        mentales, sino por un estado de
-                                        bienestar en el que
-                                        la persona realiza sus
-                                        capacidades y es capaz de hacer frente
-                                        al estrés
-                                        normal de la vida, de
-                                        trabajar y de contribuir a su
-                                        comunidad."</p>
+                                    <img src="{{asset('assets/img/icon/quotes-sign.png')}}" alt="" class="quotes-sign">
+                                    <p>"En la oscuridad de la incertidumbre, recordemos siempre que somos más fuertes de lo que creemos y que cada paso que damos hacia adelante nos acerca un poco más a la luz que brilla en nuestro camino hacia el bienestar y la plenitud."</p>
                                 </div>
                                 <!-- founder -->
                                 <div class="testimonial-founder d-flex align-items-center">
                                     <div class="founder-img">
-                                        <img src="landing/assets/img/icon/oms.png" alt="">
+                                        <img src="{{asset('landing/assets/img/gallery/perfil_IG.jpg')}}" alt="">
                                     </div>
                                     <div class="founder-text">
-                                        <span>Organización Mundial de la
-                                            Salud</span>
+                                        <span>Dra. Yeli Sancho</span>
                                         {{-- <p>Creative designer at Colorlib</p> --}}
                                     </div>
                                 </div>
                             </div>
                             <!-- Single Testimonial -->
-                            <div class="single-testimonial position-relative">
-                                <div class="testimonial-caption">
-                                    <img src="assets/img/icon/quotes-sign.png" alt="" class="quotes-sign">
-                                    <p>"El bienestar abarca un cuerpo sano, una
-                                        mente sana y
-                                        un espíritu tranquilo.
-                                        Disfruta del viaje mientras trabajas en
-                                        tu
-                                        bienestar."</p>
-                                </div>
-                                <!-- founder -->
-                                <div class="testimonial-founder d-flex align-items-center">
-                                    <div class="founder-img">
-                                        <img src="landing/assets/img/icon/testimonial.png" alt="">
-                                    </div>
-                                    <div class="founder-text">
-                                        <span>Laurette Gagnon Beaulieu</span>
-                                        <p>“Defensora del bienestar y autora</p>
-                                    </div>
-                                </div>
-                            </div>
+{{--                            <div class="single-testimonial position-relative">--}}
+{{--                                <div class="testimonial-caption">--}}
+{{--                                    <img src="assets/img/icon/quotes-sign.png" alt="" class="quotes-sign">--}}
+{{--                                    <p>"El bienestar abarca un cuerpo sano, una--}}
+{{--                                        mente sana y--}}
+{{--                                        un espíritu tranquilo.--}}
+{{--                                        Disfruta del viaje mientras trabajas en--}}
+{{--                                        tu--}}
+{{--                                        bienestar."</p>--}}
+{{--                                </div>--}}
+{{--                                <!-- founder -->--}}
+{{--                                <div class="testimonial-founder d-flex align-items-center">--}}
+{{--                                    <div class="founder-img">--}}
+{{--                                        <img src="landing/assets/img/icon/testimonial.png" alt="">--}}
+{{--                                    </div>--}}
+{{--                                    <div class="founder-text">--}}
+{{--                                        <span>Laurette Gagnon Beaulieu</span>--}}
+{{--                                        <p>“Defensora del bienestar y autora</p>--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
                         </div>
                         <!-- Testimonial End -->
                     </div>
@@ -182,15 +172,13 @@
     <!--? video_start -->
     <div class="container">
         <div class="video-area section-bg2 d-flex align-items-center"
-             data-background="landing/assets/img/gallery/video.jpg"
              style="width: 80%;
             border-radius: 25px;
-            margin-left: 10%;">
-            <div class="video-wrap position-relative">
-                <div class="video-icon">
-                    <a class="popup-video btn-icon" href="https://youtu.be/DoRRmaMGdiI"><i class="fas fa-play"></i></a>
-                </div>
-            </div>
+            margin-left: 10%;
+            margin-top: 40px">
+
+                <iframe style="width: 100%; height: 100%" src="https://www.youtube.com/embed/RFI1zc_lH_s" title="Polycystic Ovary Syndrome PCOS: Cause, symptoms and treatment👩🏻‍⚕️l Dra. Pau Zúñiga" frameborder="0" allow="accelerometer;clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
         </div>
     </div>
     <!-- video_end -->

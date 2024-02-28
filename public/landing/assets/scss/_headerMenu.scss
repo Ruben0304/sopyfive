@@ -45,7 +45,7 @@
                     display: inline-block;
                     position: relative;
                     z-index: 1;
-    
+
                     a{
                         color: #112957;
                         font-weight: 400;
@@ -93,7 +93,7 @@
                                 background: none;
                             }
                         }
-                    } 
+                    }
                 }
             }
         }
@@ -142,7 +142,7 @@
                 }
                 @media #{$xs}{
                     padding: 15px 0px;
-                } 
+                }
             }
         }
     }

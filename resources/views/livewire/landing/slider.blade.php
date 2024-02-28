@@ -25,7 +25,7 @@
                                     data-delay=".3s" style="background-color: #7D525E" >Ir a ver</a>
                                 @else
                                     <a href="{{route('encuesta')}}" class="btn" data-animation="fadeInLeft"
-                                       data-delay=".3s" style="background-color: #7D525E" >Recibe un regalo !</a>
+                                       data-delay=".3s" style="background-color: #7D525E" >¡Recibe un regalo!</a>
                                 @endif
                             </div>
                         </div>

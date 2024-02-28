@@ -2,8 +2,8 @@
     <h1>¡Hola bella!</h1>
 <br>
     <p>En SOPyFIVE te apreciamos y queremos que nos ayudes a crear la plataforma ideal para ti y otras mujeres con SOP.
-        Solo te tomará un minuto responder algunas preguntas. Al hacerlo, entrarás en el sorteo de una consulta gratuita
-        conmigo y uno de mis suplementos favoritos para el SOP. ¡Tu opinión es muy importante para este proyecto!
+        Solo te tomará un minuto responder algunas preguntas. Al hacerlo, entrarás en el sorteo de <strong>una consulta gratuita
+        conmigo y uno de mis suplementos favoritos para el SOP. </strong> ¡Tu opinión es muy importante para este proyecto!
         ¡Gracias por tu colaboración! 🫶
     </p>
 <br>

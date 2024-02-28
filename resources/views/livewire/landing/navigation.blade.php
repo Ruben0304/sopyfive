@@ -21,29 +21,29 @@
                                 <nav>
 
                                     <ul id="navigation">
-                                        <li><a href="{{ route('home') }}" >Inicio</a></li>
-                                        <li><a href="{{ route('about') }}" >Conócenos</a></li>
+                                        <li><a  style="color: #7D525E; font-weight: bold;text-transform: uppercase" href="{{ route('home') }}" >Inicio</a></li>
+                                        <li><a  style="color: #7D525E;font-weight: bold;text-transform: uppercase" href="{{ route('about') }}" >Conócenos</a></li>
                                         {{-- <li><a href="services.html">Comunidades</a></li> --}}
-                                        <li><a href="#">5 pilares</a>
+                                        <li><a  style="color: #7D525E;font-weight: bold;text-transform: uppercase" href="#">5 pilares</a>
                                             <ul class="submenu">
                                                 @foreach($comunidades as $c)
-                                                    <li><a href="{{route('comunidad',['id' =>$c->id])}}" >{{$c->title}}</a></li>
+                                                    <li><a  style="color: #7D525E;font-weight: bold;text-transform: uppercase" href="{{route('comunidad',['id' =>$c->id])}}" >{{$c->title}}</a></li>
                                                 @endforeach
 
                                             </ul>
                                         </li>
-                                        <li><a href="{{ route('market') }}">Shop</a></li>
-                                        <li><a href="#">Tus profesionales</a></li>
+                                        <li><a  style="color: #7D525E;font-weight: bold;text-transform: uppercase" href="{{ route('market') }}">Shop</a></li>
+                                        <li><a  style="color: #7D525E;font-weight: bold;text-transform: uppercase" href="#">Tus profesionales</a></li>
                                         @auth
-                                            <li><a  href="{{ route('logout') }}" id="salirMovil">Salir</a></li>
+                                            <li><a  style="color: #7D525E;font-weight: bold;text-transform: uppercase"  href="{{ route('logout') }}" id="salirMovil">Salir</a></li>
                                         @else
-                                            <li ><a  href="{{ route('login') }}" id="entrarMovil">Entrar/Registrarse</a></li>
+                                            <li ><a  style="color: #7D525E;font-weight: bold;text-transform: uppercase" href="{{ route('login') }}" id="entrarMovil">Entrar/Registrarse</a></li>
 
                                         @endauth
 
 
                                         @auth
-                                            <li style="display:inline-flex; align-items:center"><a
+                                            <li style="display:inline-flex; align-items:center"><a  style="color: #7D525E;font-weight: bold;text-transform: uppercase"
                                                     href="{{ route('about') }}">{{Auth::user()->coins}} </a><img width="20" height="20"
                                                     src="landing/assets/img/coin.png" alt="circled-v" /> </li>
                                         @endauth

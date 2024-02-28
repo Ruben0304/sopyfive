@@ -16,24 +16,22 @@
                         <div class="main-menu  d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a href="{{route('market')}}"style="color: #112957">Mercado</a></li>
-                                    <li><a href="#"  style="color: #112957">5 pilares</a>
+                                    <li><a href="{{route('market')}}" style="color: #7D525E; font-weight: bold;text-transform: uppercase">Mercado</a></li>
+                                    <li><a href="#"  style="color: #7D525E; font-weight: bold;text-transform: uppercase">5 pilares</a>
                                         <ul class="submenu">
                                             @foreach($comunities as $c)
-                                            <li><a href="#" >{{$c->title}}</a></li>
+                                            <li><a style="color: #7D525E;text-transform: uppercase" href="#" >{{$c->title}}</a></li>
                                             @endforeach
                                         </ul>
                                     </li>
-                                    <li><a href="blog.html" style="color: #112957">Categorias</a>
+                                    <li><a style="color: #7D525E; font-weight: bold;text-transform: uppercase" href="#" style="color: #112957">Categorias</a>
                                         <ul class="submenu">
-                                            <li><a href="#">x</a></li>
-                                            <li><a href="#">x</a></li>
-                                            <li><a href="#">x</a></li>
-                                            <li><a href="#">x</a></li>
+                                            <li><a style="color: #7D525E;text-transform: uppercase" href="#">x</a></li>
+
                                         </ul>
                                     </li>
-                                    <li><a href="{{route('productos')}}" style="color: #112957">Explorar</a></li>
-                                    <li><a href="{{route('home')}}"  style="color: #112957">Volver a inicio</a></li>
+                                    <li><a href="{{route('productos')}}" style="color: #7D525E; font-weight: bold;text-transform: uppercase">Explorar</a></li>
+                                    <li><a href="{{route('home')}}"  style="color: #7D525E; font-weight: bold;text-transform: uppercase">Volver a inicio</a></li>
 
 
                                 </ul>
