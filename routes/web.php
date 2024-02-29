@@ -1,6 +1,8 @@
 <?php
 
 use App\Livewire\Admin\AddArticle;
+use App\Livewire\Admin\AddCategory;
+use App\Livewire\Admin\AddProduct;
 use App\Livewire\Admin\Dashboard;
 use App\Livewire\Encuesta;
 use App\Livewire\Landing\About;
@@ -59,6 +61,8 @@ Route::get('market/search/{search}', Products::class)->name('search');
 
 Route::get('admin', Dashboard::class)->name('admin');
 Route::get('admin/nuevo-articulo', AddArticle::class)->name('add-article');
+Route::get('admin/nuevo-producto', AddProduct::class)->name('add-product');
+Route::get('admin/nueva-categoria', AddCategory::class)->name('add-category');
 
 
 Route::view('/offline', 'vendor/laravelpwa/offline')->name('offline');

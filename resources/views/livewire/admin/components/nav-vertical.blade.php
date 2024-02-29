@@ -18,11 +18,15 @@
                         </a>
                         <div class="parent-wrapper label-1">
                             <ul class="nav collapse parent" data-bs-parent="#navbarVerticalCollapse" id="nv-home">
-{{--                                <li class="collapsed-nav-item-title d-none">Mercado</li>--}}
-{{--                                <li class="nav-item"><a class="nav-link" href="../index-2.html" data-bs-toggle="" aria-expanded="false">--}}
-{{--                                        <div class="d-flex align-items-center"><span class="nav-link-text">E commerce</span></div>--}}
-{{--                                    </a><!-- more inner pages-->--}}
-{{--                                </li>--}}
+                                <li class="collapsed-nav-item-title d-none">Mercado</li>
+                                <li class="nav-item"><a class="nav-link" href="{{route('add-product')}}" data-bs-toggle="" aria-expanded="false">
+                                        <div class="d-flex align-items-center"><span class="nav-link-text">Nuevo producto</span></div>
+                                    </a><!-- more inner pages-->
+                                </li>
+                                <li class="nav-item"><a class="nav-link" href="{{route('add-category')}}" data-bs-toggle="" aria-expanded="false">
+                                        <div class="d-flex align-items-center"><span class="nav-link-text">Nueva categoría</span></div>
+                                    </a><!-- more inner pages-->
+                                </li>
 
                             </ul>
                         </div>

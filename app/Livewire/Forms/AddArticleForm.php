@@ -25,7 +25,7 @@ class AddArticleForm extends Form
             'title' => ['required', 'string', 'max:255'],
             'content' => ['required', 'string', 'min:300'],
             'comunity' => ['required', 'numeric','exists:comunities,id'],
-            'photo' => ['image', 'max:5000', 'mimes:jpg'], // Validar la imagen
+            'photo' => ['required','image', 'max:5000', 'mimes:jpg'], // Validar la imagen
         ]);
 
         // Obtener la ruta de la imagen y guardarla en el disco 'public'
