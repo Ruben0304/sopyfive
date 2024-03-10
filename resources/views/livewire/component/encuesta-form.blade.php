@@ -151,8 +151,7 @@
         </div>
     </div>
     <div class="mb-3">
-        <p >¿Te gustaría tener una tienda en línea adaptada a tus
-            necesidades? ¿En caso de que asi sea, qué te gustaría encontrar en la
+        <p >¿Te gustaría disponer de tienda en línea con productos adaptados a tu estilo de vida? ¿En caso de que asi sea, qué te gustaría encontrar en la
             tienda de
             SOPyFIVE?</p>
         <textarea wire:model='form.gustaria_tienda' class="form-control" id="basic-form-textarea" rows="4"

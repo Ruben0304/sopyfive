@@ -9,7 +9,7 @@ class Articulo extends Model
 {
     use HasFactory;
 
-    protected $table = "articulos";
+    protected  $table = "articulos";
 
     protected $fillable = ['title', 'content', 'comunity_id'];
     protected $casts = [
