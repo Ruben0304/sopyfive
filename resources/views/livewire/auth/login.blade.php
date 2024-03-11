@@ -1,4 +1,4 @@
-<form class="login100-form validate-form" wire:submit="register">
+<form class="login100-form validate-form" wire:submit="login">
     <div style="display: inline-grid">
         @foreach ($errors->all() as $error)
             <span class="text-danger">{{ $error }}</span> <!-- Mostrar el mensaje de error -->

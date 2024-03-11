@@ -2,7 +2,6 @@
 
 use App\Livewire\Actions\Logout;
 use App\Livewire\Actions\OAuth;
-use App\Livewire\Auth\ChangePassword;
 use App\Livewire\Auth\Login;
 use App\Livewire\Auth\Register;
 use Illuminate\Support\Facades\Route;
@@ -57,8 +56,12 @@ Route::middleware('guest')->group(function () {
 
 });
 
+// Ruta para mostrar el formulario de solicitud de restablecimiento de contraseña
+Route::get('forgot-password', \App\Livewire\Auth\EmailForgotPassword::class)->name('password.request');
 
-Route::get('/reset-password', ChangePassword::class)->name('reset-password');
+// Ruta para mostrar el formulario de restablecimiento de contraseña
+Route::get('reset-password/{token}', \App\Livewire\Auth\ChangePassword::class)
+    ->name('password.reset');
 
 
 Route::middleware('auth')->group(function () {

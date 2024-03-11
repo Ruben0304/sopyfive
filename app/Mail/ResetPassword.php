@@ -12,13 +12,14 @@ use Illuminate\Queue\SerializesModels;
 class ResetPassword extends Mailable
 {
     use Queueable, SerializesModels;
+    private string $token;
 
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct($token)
     {
-        //
+        $this->token=$token;
     }
 
     /**
@@ -27,7 +28,7 @@ class ResetPassword extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Reset Password',
+            subject: 'Restablecer contraseña',
         );
     }
 
@@ -38,6 +39,7 @@ class ResetPassword extends Mailable
     {
         return new Content(
             view: 'vendor.mail.info-sopyfive',
+            with: ['token' => $this->token],
         );
     }
 

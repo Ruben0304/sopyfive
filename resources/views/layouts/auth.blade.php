@@ -15,24 +15,24 @@
     <!--===============================================================================================-->
     <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
     <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="auth/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('auth/vendor/bootstrap/css/bootstrap.min.css')}}">
     <!--===============================================================================================-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!--=========================================auth/======================================================-->
-    <link rel="stylesheet" type="text/css" href="auth/fonts/iconic/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('auth/fonts/iconic/css/material-design-iconic-font.min.css')}}">
     <!--=========================================auth/======================================================-->
-    <link rel="stylesheet" type="text/css" href="auth/vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('auth/vendor/animate/animate.css')}}">
     <!--=========================================auth/======================================================-->
-    <link rel="stylesheet" type="text/css" href="auth/vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('auth/vendor/css-hamburgers/hamburgers.min.css')}}">
     <!--=========================================auth/======================================================-->
-    <link rel="stylesheet" type="text/css" href="auth/vendor/animsition/css/animsition.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('auth/vendor/animsition/css/animsition.min.css')}}">
     <!--=========================================auth/======================================================-->
-    <link rel="stylesheet" type="text/css" href="auth/vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('auth/vendor/select2/select2.min.css')}}">
     <!--=========================================auth/======================================================-->
-    <link rel="stylesheet" type="text/css" href="auth/vendor/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('auth/vendor/daterangepicker/daterangepicker.css')}}">
     <!--=========================================auth/======================================================-->
-    <link rel="stylesheet" type="text/css" href="auth/css/util.css">
-    <link rel="stylesheet" type="text/css" href="auth/css/main.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('auth/css/util.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('auth/css/main.css')}}">
     <!--===============================================================================================-->
     @laravelPWA
 </head>

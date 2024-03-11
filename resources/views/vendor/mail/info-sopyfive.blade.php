@@ -5,7 +5,7 @@
 
     Recibes este correo electrónico porque hemos recibido una solicitud de restablecimiento de contraseña para tu cuenta.
 
-   {{route('reset-password', ['token' => '$token', 'email' => '$email'])}}
+   {{route('password.reset', ['token' => $token])}}
         Restablecer contraseña
 
 

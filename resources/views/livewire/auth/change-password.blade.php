@@ -1,4 +1,4 @@
-<form class="login100-form validate-form" wire:submit="register">
+<form class="login100-form validate-form" wire:submit="resetPassword">
     <div style="display: inline-grid">
         @foreach ($errors->all() as $error)
             <span class="text-danger">{{ $error }}</span> <!-- Mostrar el mensaje de error -->
@@ -14,14 +14,14 @@
     <div class="wrap-input100 validate-input m-b-23" data-validate="Password is required">
         <span class="label-input100">Nueva contraseña</span>
         <input class="input100" type="password" name="pass" placeholder="Escriba su contraseña"
-               wire:model="form.password">
+               wire:model="password">
         <span class="focus-input100" data-symbol="&#xf190;"></span>
     </div>
 
     <div class="wrap-input100 validate-input  m-b-23 " data-validate="Password is required">
         <span class="label-input100">Confirmar contraseña</span>
         <input class="input100" type="password" placeholder="Repita la contraseña"
-               wire:model="form.password_confirmation">
+               wire:model="password_confirmation">
         <span class="focus-input100" data-symbol="&#xf190;"></span>
     </div>
 
