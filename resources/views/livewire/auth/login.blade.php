@@ -23,7 +23,11 @@
         <span class="focus-input100" data-symbol="&#xf190;"></span>
     </div>
 
-
+    <div class="text-right p-t-8 p-b-31">
+        <a href="{{route('password.request')}}">
+            ¿Olvidaste la contraseña?
+        </a>
+    </div>
 
     <div class="container-login100-form-btn" style="margin-top: 40px ">
         <div class="wrap-login100-form-btn">
