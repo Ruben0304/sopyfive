@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Comunity;
 use Livewire\Component;
 
 class EncuestaDialog extends Component
@@ -18,6 +19,11 @@ class EncuestaDialog extends Component
     public string $email_phone;
     public $comunidades = [];
 
+
+    public function mount()
+    {
+        $this->comunidades = Comunity::all();
+    }
     public function rules()
     {
         return [
