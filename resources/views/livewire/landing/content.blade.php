@@ -98,7 +98,7 @@
                             <img src="landing/assets/img/icon/Shop.png" alt="">
                         </div>
                         <div class="cat-cap">
-                            <h5><a href="/">Mercado</a></h5>
+                            <h5><a href="#">Mercado (Pronto)</a></h5>
                             <p style="text-align: initial;">Descubre suplementos especializados para el
                                 manejo del
                                 síndrome de ovario
