@@ -19,7 +19,7 @@
                 <div class="modal-body">
 
                     {{-- FORMULARIO ENCUESTA --}}
-                    <livewire:component.encuesta-form></livewire:component.encuesta-form>
+                    <livewire:component.encuesta-dialog>
 
 
                 </div>
