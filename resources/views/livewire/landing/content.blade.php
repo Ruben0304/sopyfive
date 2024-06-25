@@ -106,7 +106,7 @@
                                 medicina funcional
                                 para un bienestar
                                 integral.</p>
-                            <a href="{{route('market')}}" class="plus-btn"><i class="ti-arrow-up"></i></a>
+                            <a href="#" class="plus-btn"><i class="ti-arrow-up"></i></a>
                         </div>
                     </div>
                 </div>
