@@ -13,17 +13,15 @@ class Register extends Component
 {
     public RegisterForm $form;
 
-    
+
     public function register(): void
     {
-
         $this->form->register();
 
-
-        $this->redirect(
-            session('url.intended', route('home'))
-        );
+        // Redirige a una ruta específica después de la creación del usuario
+        $this->redirect(route('home'));
     }
+
 
     #[Layout('layouts.auth')]
     public function render()

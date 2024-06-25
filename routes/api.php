@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\V1\ArticuloController;
+use App\Http\Controllers\API\V1\CartController;
 use App\Http\Controllers\API\V1\ComunityController;
 use App\Http\Controllers\API\V1\ProductController;
 use Illuminate\Http\Request;
@@ -19,10 +20,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('v1')->group(function () {
-    Route::apiResource('comunity', ComunityController::class)->middleware('auth:sanctum');
+    Route::apiResource('comunity', ComunityController::class);
     Route::apiResource('article', ArticuloController::class)->middleware('auth:sanctum');
     Route::apiResource('product', ProductController::class);
-    Route::post('article/photo', [ArticuloController::class, 'storeIMG'])->middleware('auth:sanctum');
+    Route::apiResource('cart', CartController::class)->middleware('auth:sanctum');
     //Route::post('article', [ArticuloController::class, 'store'])->middleware('auth:sanctum');
 
 });

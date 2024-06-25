@@ -32,10 +32,10 @@
 
                                             </ul>
                                         </li>
-                                        <li><a  style="color: #7D525E;font-weight: bold;text-transform: uppercase" href="{{ route('market') }}">Shop</a></li>
+                                        <li><a  style="color: #7D525E;font-weight: bold;text-transform: uppercase" href="/">Shop (Pronto)</a></li>
                                         <li><a  style="color: #7D525E;font-weight: bold;text-transform: uppercase" href="#">Tus profesionales</a></li>
                                         @auth
-                                            <li><a  style="color: #7D525E;font-weight: bold;text-transform: uppercase"  href="{{ route('logout') }}" id="entrarMovil">Salir</a></li>
+                                            <li><a  style="color: #7D525E;font-weight: bold;text-transform: uppercase"  wire:click="logout" id="entrarMovil">Salir</a></li>
                                         @else
                                             <li ><a  style="color: #7D525E;font-weight: bold;text-transform: uppercase" href="{{ route('login') }}" id="entrarMovil">Entrar/Registrarse</a></li>
 

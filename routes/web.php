@@ -50,14 +50,14 @@ Route::get('/blog_details/{id}', BlogDetails::class)->name('blog-details');
 Route::get('/about', About::class)->name('about');
 Route::get('/terms_conditions', TermsConditions::class)->name('terms-conditions');
 
-
-Route::get('market/home', MarketHome::class)->name('market');
-Route::get('market/products', Products::class)->name('productos');
-Route::get('market/shipping-details', ShippingDetails::class)->name('shipping-details');
-Route::get('market/cart', Cart::class)->name('cart');
-Route::get('market/product/{producto}', ProductInfo::class)->name('product-info');
-Route::get('market/search/{search}', Products::class)->name('search');
-
+//
+//Route::get('market/home', MarketHome::class)->name('market');
+//Route::get('market/products', Products::class)->name('productos');
+//Route::get('market/shipping-details', ShippingDetails::class)->name('shipping-details');
+//Route::get('market/cart', Cart::class)->name('cart');
+//Route::get('market/product/{producto}', ProductInfo::class)->name('product-info');
+//Route::get('market/search/{search}', Products::class)->name('search');
+//
 
 Route::get('admin', Dashboard::class)->name('admin');
 Route::get('admin/nuevo-articulo', AddArticle::class)->name('add-article');
