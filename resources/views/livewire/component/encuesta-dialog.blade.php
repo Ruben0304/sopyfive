@@ -106,7 +106,7 @@
 
     <div class="form-floating mb-3">
         <p>¿Qué área de bienestar te interesa más? Puedes marcar varias.</p>
-        @foreach ($comunidades as $c)
+        @foreach ($comunidades_vista as $c)
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" wire:model="form.comunidades.{{ $c->id }}"
                        wire:key="comunidad-{{ $c->id }}" value="{{ $c->id }}">
